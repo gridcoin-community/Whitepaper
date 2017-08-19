@@ -1,0 +1,8 @@
+\subsection{Coin Supply and security measures}
+
+With a fixed dailyResearchCoinSupplyPerProject it would not be ensured that the inflation rate is always the same; it could vary depending on how many new researchers join the project. Because of this, the amount of average payouts over the last 14 days is used as a lagging indicator of how much was paid out recently - if very little was paid out in the last 14 days more is paid out now and the other way round.
+
+dailyResearchCoinSupply = MaxDailyEmissions - AvgDailyPaymentsPaidInLast14Days
+
+There are also a few security rules. For example Time since last payment in days can not be greater than 6 months, otherwise there is no payment and the coins paid out per user does have a very high upper limit (~20000)  per stake.
+The MaxDailyEmissions is set to 50000, which at the current coin supply means an research-inflation of around 5%. This rate however will grow smaller, as the coin supply grows but the amount of coins produced per day stays the same. Additionally the inflationRewardForNode is chosen, so that the interest inflation is around 1.5% per year.
