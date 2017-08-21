@@ -1,11 +1,23 @@
 \section{Rewarding Researchers}
 
-TODO: fix formulas so that they appear correctly
+Gridcoin does not only want to reward holders of the coin (as in pure Proof of Stake coins such as Peercoin [2]), but wants to reward researchers. Because of this there is an additional reward depending on the amount of research done. This information is read from a superblock. In some blocks, so called superblocks, the majority opinion from the distributed Neural Network, which user has done how much work is also saved as a hash. These blocks are generated once a day. The current amount of research done by each CPID stored in the last superblock can be viewed on [SUPER]. If a node gets chosen and the hash this node contains about the amount of work done by each user is the same as the majority hash stored in the Neural Network, then this node gets to stake the next block and everything starts again. If the hash is not the same as the majority hash, the node gets punished for trying to cheat the system and does not stake, as in any other consensus based cryptocurrency. The actual reward the node gets then depends on the \textit{RAC} (Recently Averaged Credit [22]) for each project for this user as stored in the superblock.
 
-Gridcoin does not only want to reward holders of the coin (as in pure proof-of-stake coins such as Peercoin), but wants to reward researchers. Because of this there is an additional reward depending on the amount of research done. This information is read from a superblock. In some blocks, so called superblocks, the majority opinion from the distributed Neural Network, which user has done how much work is also saved as a hash. These blocks are generated once a day. The current amount of research done by each CPID stored in the last superblock can be viewed on [SUPER]. If a node gets chosen and the hash this node contains about the amount of work done by each user is the same as the majority hash stored in the Neural Network, then this node gets to stake the next block and everything starts again. If the hash is not the same as the majority hash, the node gets ?punished? for trying to cheat the system and does not stake, but chooses the next node that gets a chance to stake. The actual reward the node gets then depends on the RAC for each project for this user as stored in the superblock.
+To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The \textit{cobblestone} is a unit of measure defined as follows: it is 1/200 day (=7 minutes and 12 seconds, 432 seconds) of CPU time on a reference computer that does 1 Gigaflop (= 1 billion floating point operations per second) based on the Whetstone benchmark. A \textit{cobblestone} in other words correspond to 432 seconds * 1 Gigaflop = 432 billion floating point operations.
+
+Recently Averaged Credit is computed as follows: the daily average of cobblestones in last week plus half of the daily average of cobblestones during two weeks ago plus fourth of the daily average during three weeks ago and so on. 
+
+We hereby define:
+\begin{description}
+  \item{$\gamma$} : this is the average \textit{RAC} done by a user on a particular BOINC project \textit{p} since last payment to user \textit{u} identified by \textit{CPID}.
+  \item{$\Gamma$} : this is the average \textit{RAC} done by all users partecipating in Gridcoin on a particular BOINC project \textit{p} since last payment to user \textit{u}.
+\end{description}
+
+The ratio
+\[\gamma/\Gamma\]
+is the percentage of work done by user \textit{u} on BOINC project \textit{p} in respect to all other gridcoin users working on project \textit{p}.
 
 At first the amount of coins per project this user would get if he was only running this project is computed:
-\[ coinsPerProject = (averageUserProjectRACsincelastPayment /
+\[ coinsPerProject = (\varrho /
 averageTeamGridcoin ProjectRACsinclelastPayment) * Time since last payment in days * coinSupplyPerProjectPerDay \]
 
 As of now the dailyCoinSupplyPerProject is the same for each project, so
