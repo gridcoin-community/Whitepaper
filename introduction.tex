@@ -1,21 +1,23 @@
 \section{Introduction}
 \label{sec:intro}
 
-Although there are other configurations, a typical node runs both the BOINC client to download, execute and report results of scientific computations and the Gridcoin client. The gridcoin client performs several functions: like a bitcoin wallet it allows to transfer money from different addresses, it keeps the blockchain with transactions up to date talking to other nodes and verifying each new block for validity and tries to stake other blocks on the blockchain by collecting new transactions. The coinstake in the proposed new blocks for the own wallet corresponds to the amount of work done on BOINC expressed in gridcoins.
+Gridcoin [6] is a decentralized, open source math-based digital asset (cryptocurrency) which performs transactions peer-to-peer cryptographically without the need for a central issuing authority. Gridcoin securely rewards volunteer distributed computing performed upon the BOINC [5] platform in a decentralized manner. Available projects in BOINC in 2017 range from attempting to cure diseases like cancer [11,12,13], ebola [11], AIDS [11] and virus Zika [11], through orbit analysis and reconstruction of asteroids [14], through simulating earth in different ages to assess climate change [15], through mathematical research [16,17], through identification of subatomic particles [18] to scanning the sky for gravitational waves [19] and extraterrestrial intelligence [20].\\
 
-TODO: do nice figure about single node with Gridcoin/BOINC
-TODO: do nice figure about network of nodes running Gridcoin/BOINC.
+Although there are other configurations, a typical node runs both the BOINC client to download, execute and report results of scientific computations and the Gridcoin client. The gridcoin client performs several functions: like a bitcoin wallet it allows to transfer money from different addresses, it keeps the blockchain with transactions up to date talking to other nodes and verifying each new block for validity and tries to stake other blocks on the blockchain by collecting new transactions. The coinstake in the proposed new blocks for the own wallet corresponds to the amount of work done on BOINC expressed in gridcoins.\\
+
+TODO: do nice figure about single node with Gridcoin/BOINC.\\
+TODO: do nice figure about network of nodes running Gridcoin/BOINC.\\
 
 \subsection{BOINC}
 
-BOINC is a system for distributing the workload of scientific simulations. Users of BOINC have a client running that solves work units (WU) for the specific projects. A work unit consists of code and specific parameters for which the code is run.  After the work unit is completed the BOINC client sends back the results to the BOINC servers, where the results are analyzed.
+BOINC is a system for distributing the workload of scientific simulations. Users of BOINC have a client running that solves work units (WU) for the specific projects. A work unit consists of code and specific parameters for which the code is run.  After the work unit is completed the BOINC client sends back the results to the BOINC servers, where the results are analyzed.\\
 
 TODO: update project list
-One example for a BOINC project is the World Community Grid [WCG], which consists of various other projects, for example to solve cancer [Cancer] or beat Ebola [Ebola] . SETI@home [SETI], which looks for signs of alien life by monitoring electromagnetic radiation from space for patterns, is another well-known project.  In total there are about 40 BOINC projects, but only the BOINC projects on the [Whitelist] help users earn Gridcoins.
+One example for a BOINC project is the World Community Grid [WCG], which consists of various other projects, for example to solve cancer [Cancer] or beat Ebola [Ebola] . SETI@home [SETI], which looks for signs of alien life by monitoring electromagnetic radiation from space for patterns, is another well-known project.  In total there are about 40 BOINC projects, but only the BOINC projects on the [Whitelist] help users earn Gridcoins.\\
 
-The information which researcher has computed how many work units is stored on the BOINC server. The unit of work done is a credit (cobblestone), which is 1,000 double-precision MFLOPS based on the Whetstone benchmark [Whetstone].  The RAC is the average amount of credits earned  per day.
+The information which researcher has computed how many work units is stored on the BOINC server. The unit of work done is a credit (cobblestone), which is 1,000 double-precision MFLOPS based on the Whetstone benchmark [Whetstone].  The RAC is the average amount of credits earned  per day.\\
 
-A CPID (Cross Project Identifier) is a number that links together the participation of a single user in all the different projects with a single common identifier, with a CPID one can see the research done by one user over all different projects this user participates in.
+A CPID (Cross Project Identifier) is a number that links together the participation of a single user in all the different projects with a single common identifier, with a CPID one can see the research done by one user over all different projects this user participates in.\\
 
 There are also teams in BOINC, users can join teams and the work done by each member of the team is added to get the work done by the team. It is necessary for a Gridcoin-researcher to be a part of team ?Gridcoin?, which on some projects is listed as ?gridcoin?, lowercase.
 
