@@ -26,17 +26,17 @@ The amount of coins $\sigma$ for project \textit{p} the user \textit{u} gets if 
 As of now the $\Theta$ is the same for each project, so
 \[ \Theta = G/n \]
 
-$\gamma$ and $\Gamma$ are calculated so that in case there were several superblocks since the last payment the average RAC of all those superblocks is used.
+$\gamma$ and $\Gamma$ are calculated so that in case there were several superblocks since the last payment the average RAC of all those superblocks is used.\\
 
-The research reward is then the sum of the rewards for each whitelisted project:
+The $researchreward$ for user \textit{u} is then the sum of the rewards for each whitelisted project:
 
-\[ researchRewardForNode = sum of  coinsPerProject  over all whitelisted projects \]
+\[ researchreward = \sum_{p=1}^{n} \sigma(p) \]
 
 
-The totalRewardPerNode  is then the reward for the research done by this node plus the reward that any node gets for staking a block:
-\[ totalRewardPerNode = inflationRewardForNode +  researchRewardForNode \]
+The $totalreward$  for user \textit{u} is then the reward for the research done by this node plus the reward that any node gets for staking a block, called $inflationreward$ in the next formula:
+\[ totalreward = inflationreward +  researchreward \]
 
-The inflationRewardForNode depends on the time that passed since the last stake is chosen in a way that it leads to an interest rate of 1.5% per year.
+The $inflationreward$ depends on the time that passed since the last stake is chosen in a way that it leads to an interest rate of 1.5% per year.\\
 
-The rewards that contain only inflationRewardForNode and no researchRewardForNode
-are often called PoS (Proof of Stake) rewards, whereas the rewards containing inflationRewardForNode plus researchRewardForNode are called Proof of Research rewards.
+The rewards that contain only $inflationreward$ and no $researchreward$
+are often called PoS (Proof of Stake) rewards, whereas the rewards containing $inflationreward$ plus $researchreward$ are called Proof of Research rewards.
