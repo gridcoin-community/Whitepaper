@@ -1,7 +1,12 @@
 \section{Introduction}
 \label{sec:intro}
 
-\subsubsection{BOINC}
+Although there are other configurations, a typical node runs both the BOINC client to download, execute and report results of scientific computations and the Gridcoin client. The gridcoin client performs several functions: like a bitcoin wallet it allows to transfer money from different addresses, it keeps the blockchain with transactions up to date talking to other nodes and verifying each new block for validity and tries to stake other blocks on the blockchain by collecting new transactions. The coinstake in the proposed new blocks for the own wallet corresponds to the amount of work done on BOINC expressed in gridcoins.
+
+TODO: do nice figure about single node with Gridcoin/BOINC
+TODO: do nice figure about network of nodes running Gridcoin/BOINC.
+
+\subsection{BOINC}
 
 BOINC is a system for distributing the workload of scientific simulations. Users of BOINC have a client running that solves work units (WU) for the specific projects. A work unit consists of code and specific parameters for which the code is run.  After the work unit is completed the BOINC client sends back the results to the BOINC servers, where the results are analyzed.
 
@@ -14,7 +19,7 @@ A CPID (Cross Project Identifier) is a number that links together the participat
 
 There are also teams in BOINC, users can join teams and the work done by each member of the team is added to get the work done by the team. It is necessary for a Gridcoin-researcher to be a part of team ?Gridcoin?, which on some projects is listed as ?gridcoin?, lowercase.
 
-\subsubsection{Gridcoin}
+\subsection{Gridcoin Client}
 
 TODO: 
 
@@ -22,7 +27,11 @@ TODO:
 
 For setting up BOINC and the Gridcoin client to earn Gridcoins by running scientific simulations on your computer follow the tutorial on gridcoin.us
 The steps involved are:
-* Install BOINC
-* Install and configure Gridcoin wallet 
-* Acquire Gridcoin and move them to your wallet
-* Send beacon
+\begin{itemize}
+  \item Install BOINC
+  \item Add projects to BOINC
+  \item Install and configure Gridcoin wallet so that it is linked to BOINC 
+  \item Acquire gridcoins and move them to your wallet
+  \item Send a beacon so that the wallet CPID is persisted in the blockchain
+  \item Wait until client manages to stake first block with PoS and DPoR reward for your wallet.
+\end{itemize}
