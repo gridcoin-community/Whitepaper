@@ -11,5 +11,350 @@ TODO: ask developers
 
 \subsection{Proximity of neighbours}
 
+\comm{
 describe proposal about having nodes connecting to geographical neighbours and still have some random connections.
 discuss mathematically some implications...
+
+i think gridcoin could solve alone the scalability problem
+
+
+[10:56] 
+for sure it will do before bitcoin does it
+
+
+[10:56] 
+and ethereum/golem are also fighting scalability
+
+
+[10:56] 
+even if you change to something else, nobody will give you 30k TPS
+
+
+[10:57] 
+as my boss keep saying: "chi fa da s� fa per tre"
+
+
+[10:57] 
+who tackles it out alone, does it as three would try to do it
+
+
+[10:58] 
+cm, do you have a link to the gridphene doc?
+
+
+cm 
+[11:00 PM] 
+added and commented on this Plain Text snippet: Brainstormed 'gridphene' idea
+If we're brainstorming & crazy moonshot ideas are on the table: What about switching to the Graphene codebase (by forking either bitshares or steem, graphene core is older) & port GRC functionality over? 
+Links:
+https://github.com/cryptonomex/graphene
+https://github.com/bitshares/bitshares-core
+https://github.com/steemit/steem
+Starting with the disadvantages: 
+* New codebase thus potentially large learning curve.
+* A large amount of current code wouldn't be compatible & would require being ported to c++.
+* Not a short term development undergoing, highly plausible that the porting of the GRC features to c++ will prove difficult & time consuming.
+* Migrating blockchain (performing a snapshot of the GRC (research) blockchain, performing a sharedrop & import private keys to access funds, instead of manual burn process)
+* Likely large maintenance period for exchanges and services.
+* If users don't need GRC to stake, then users may have less incentive to hold GRC (increased selling pressure) unless we inherited the functionality of BTS/Steem.
+* Steem compared to BTS is quite different, so cherry picking ideas from one into the other would likely prove problematic.
+* Doesn't solve the current proof of CPID ownership problem, still requires further research (though a concern for GRC too).
+Advantages:
+* Uplift to a maintained codebase (considering we have a potentially huge BTC change backlog to dredge through)
+* 10k+ transactions per second (TPS) proven on Bitshares, compared to our TPS in the single/double digit range.
+* Low stake weight concern would be gone - only elected witnesses would produce blocks & if unreliable they can be voted out by the network. Block producers would be trusted community members, not every token holder on the network.
+* No need to continue development on current GRC issues such as POS Staking mechanisms, hardening/decentralizing voting, decentralizing permissions (beacon deletion & project registration transaction role that RTM held).
+* Reduced quantity of users downloading the stats files each day (as opposed to hundreds to potentially thousands currently) eliminating DDOS concern without needing central proxy server.
+* Witnesses could implement their own external BOINC statistics gathering scripts (with any preferred language), rather than a single solution being built into the client.
+* Witnesses could publish BOINC statistics at will, similar to the current BTS price feed mechanism, negating the need for a daily superblock if we were to average the credit published by each witness when issuing rewards (perhaps at a scheduled time, or more frequent for users with more GRC).
+* Graphene has an easily configurable UI & web wallet interfaces (which anyone can host).
+* If we were to implement a similar distribution mechanism to steem (issuing additional tokens to users based on mag instead of votes) the distribution mechanism would be similar to the older cryptolottery system without the risk of manipulation.
+* No initial investment requirement would ease recruitment of new users, potentially enabling automated BOINC + GRC client wizard setups.
+* Clean blockchain slate - we've got old scrypt blocks & old blockchain data no longer in use (which we currently need to support to enable syncing from zero).
+* If a fork of BTS: Issue tokens for projects, teams, etc & have an inbuilt exchange w/ GRC as the base trading pair (and token to power the network).
+1 Comment Click to expand inline 30 lines
+
+Very much a draft, lacks full specs of the potential end product
+
+
+
+dangermouse77 [11:01 PM] 
+how many TPS does graphene do?
+
+
+cm 
+[11:02 PM] 
+proven 3k+ in a recent testnet stress test, however that was limited due to misconfiguration of the stress test environment
+
+
+dangermouse77 [11:03 PM] 
+and do they have a pure P2P topology or do they start with a hierarchichal one?
+
+
+[11:03] 
+i think the key to scale is to change is not to change gridcoin as a protocol
+
+
+[11:03] 
+only the way in how blocks are shared betwen nodes has to be smarter
+
+
+[11:04] 
+for example there could be supernodes that record the GPS position of all nodes in the network
+
+
+[11:04] 
+the gridcoin client will not try to connect at random, but only to the closer nodes
+
+
+[11:04] 
+i know geographical position is not always the real network topology below
+
+
+[11:05] 
+but i am sure that if my client connects to clients in Switzerland it will be faster than if it has one connection to South Africa and one to Thailand.
+
+
+[11:07] 
+i tried to implement this idea in G.P.U. v2 but never finished. lack of funding as i did everything in free time. also i am getting older and prefer to spend some time with my family instead of programming through the night :disappointed: (edited)
+
+
+[11:08] 
+sometimes i also enjoy taking the sun, instead of being bunkered in front of a computer! how i changed, pity on me! 8-)
+
+
+[11:09] 
+joke by side, there are simple apis which offer geolocation based on ip (edited)
+
+
+[11:10] 
+there are also for free that have enough precision at least for the first iteration
+
+
+brod 
+[11:11 PM] 
+Stake output count limited to 2 outputs. (rob)
+
+
+dangermouse77 [11:11 PM] 
+and the database is not too big (300kB out of my memory), it could be included in the client, maybe with some autoupdate feature (maybe dangerous for security) (edited)
+
+
+[11:15] 
+Gnutella had a mechanism to record nodes active in the network named GWebCache
+
+
+[11:15] 
+add geolocation info to a new node registering to GWebCache
+
+
+[11:16] 
+and implement retrieval of nearest neighbours to the node asking for other clients to connect to
+
+
+[11:17] 
+(GWebcache is technology around 2000-2002)
+
+
+cm 
+[11:18 PM] 
+I don't think P2P networking is a source of scalability issues w/ grc/btc
+
+
+dangermouse77 [11:20 PM] 
+another simple scaling measure: do a benchmark on network throughput and CPU speed and decide how many nodes the client should connect to. if it is an old machine take a max of 3 on a crappy network, if it is fast give them 10. be careful that speed has to be benchmarked in both download and upload. most nodes have fast download and crap upload (asymmetric), so you need to take the min(download_speed, upload_speed)
+
+
+[11:21] 
+but when i look at my client, it has huge spikes in traffic
+
+
+[11:22] 
+boinc regularly suspends computations to let gridcoinresearchd do the work
+
+
+[11:22] 
+(maybe i have some problem in my setup)
+
+
+ifoggz
+[11:22 PM] 
+Awe already p2p technically. My nodes get around 130 to peaks of 180 connections. My home wallet even boinc going I get 45 to 90 depends
+
+
+dangermouse77 [11:22 PM] 
+and do you have a list of all countries connected by your node?
+
+
+cm 
+[11:23 PM] 
+You can do that yourself via getpeerinfo & running it through geoip.
+
+
+dangermouse77 [11:24 PM] 
+sorry for my numbers, 3 and 10 i was using them in 2002
+
+
+cm 
+[11:24 PM] 
+The grc netdata charts have geoip functionality
+
+
+ifoggz
+[11:25 PM] 
+A
+
+
+[11:26] 
+Ya I made an addition to mine to show ipv4 vs ipv6 connections
+
+
+[11:26] 
+The group database automatically updates every 24 hours
+
+
+[11:26] 
+Geoip *
+
+Mengotti Tiziano Flavio <tiziano.mengotti@gmail.com>
+Aug 7
+
+to me 
+dangermouse77 [1:23 AM] 
+@cm new proposal: connect the nodes randomly first. learn about new nodes through the network. for each new node based on its geolocation decide if it adding it and removing the one which is farthest is a good deal, keep doing this. of course do not exagerate, we want a bit of randomness to avoid island behaviour. still some randomness will be given by the inaccurate geoip database. you know? i have a new proposal again (edited)
+
+
+brod [1:23 AM] 
+@here We have a bug report which fatally affects new users and installations.
+
+
+dangermouse77 [1:24 AM] 
+all nodes are equal, no hierarchy, still the topology tends to be better
+
+
+ifoggz
+[1:24 AM] 
+toronto node 141 connections 119 ipv4/22ipv6 - 75 NA 1 SA 57 europe 4 asia 1 oceania
+
+
+dutch
+[1:24 AM] 
+@brod to do with the newest release?
+
+
+gunde [1:25 AM] 
+what kind of bug could this be or effect out of it?
+
+
+dangermouse77 [1:28 AM] 
+again another proposal: instead of using the geoip database, simply use the countrycode (is it the first number in the IP?) this might be more than enough for the first iteration
+
+
+[1:28] 
+no it is not the first number, i assume a DNS call has to be made, don't remember
+
+
+ifoggz
+[1:29 AM] 
+no its not. u can find various ip ranges in that same class A for different countries
+
+
+brod
+[1:29 AM] 
+dns is expensive and centralizing
+
+
+[1:29] 
+Consider using TTL (hop-count) or RTT (ping)
+
+
+ifoggz
+[1:29 AM] 
+ipwhios with arin or various providers. but its updated regualrly so the database is no really static
+
+
+dangermouse77 [1:29 AM] 
+but then let's stick with the geoip database
+
+
+[1:30] 
+it will be accurate enough
+
+
+[1:30] 
+i was using this one, just a moment
+
+
+[1:31] 
+TTL can not be used i think
+
+
+[1:32] 
+RTT (ping) yes, but we would need to ping each new discovered node
+
+
+[1:32] 
+so it would not work either
+
+
+[1:35] 
+ah no in the end in GPU v2 i asked every user to set first their geoip location manually in the initial setup and had servers acting a bit like GWebCaches modified to return the geoip location the user set
+
+
+[1:36] 
+but still i do not remember for which project
+
+
+[1:36] 
+(maybe still for this one)
+
+
+[1:36] 
+i gave a look to
+
+
+[1:36] 
+https://dev.maxmind.com/geoip/legacy/geolite/
+
+
+[1:37] 
+IP Geolocation
+The GeoLite databases are our free IP geolocation databases. They are updated on the first Tuesday of each month. These databases are offered in the same binary and csv formats as our subscription databases. Any code which can read the subscription databases can also read the GeoLite databases.
+
+IP geolocation is inherently imprecise. Locations are often near the center of the population. Any location provided by a GeoIP database should not be used to identify a particular address or household.
+
+We publish accuracy statistics for GeoLite City.
+
+
+[1:40] 
+one mod for the idea if the database turns out to be crap: ask users to enter their geoip information in gridcoinresearchd.conf and modify the discovery packet to include IP _and_ geoip information
+
+
+dangermouse77 [1:46 AM] 
+the last entry of the G.P.U. changelog reads:
+
+
+[1:47] 
+24.03.2016 git
+- added a geolocation service to GPU server based on shiny_geoip available at http://geoip.nekudo.com/ and 
+https://github.com/nekudo/shiny_geoip
+geoip.nekudo.com
+Free IP GeoLocation/GeoIp API - geoip.nekudo.com
+Free GeoIP/Geolocation REST API. An open-source project by nekudo.com.
+ GitHub
+nekudo/shiny_geoip
+shiny_geoip - IP to location API service
+ 
+
+
+[1:47] 
+but this is a web API based on MaxMind database
+
+
+[1:48] 
+well we should ask this nekudo guy how good his ip database is (edited)
+
+
+[1:51] 
+even if the database is a bit bad, network topology should still improve, assuming that not geolocated ips are clearly recognizable in the database
+}
