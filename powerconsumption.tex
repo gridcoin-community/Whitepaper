@@ -1,6 +1,7 @@
 \subsection{Gridcoin Power Consumption estimate}
 
-We start to calculate the consumption of Gridcoin closest relative, Bitcoin. We use first the approach explained in [29], where it is assumed that an ASIC miner (a dedicated hash processor) calculates with 1 Watt of power one Gigahash/s. According to [26], bitcoin speed on August 26, 2017 was 6'354'668.57 terahash/s or 6'354'668'570 gigahash/s or 6'354'668'570 W. These are 6.354 GW of power. They are equivalent to the power produced by 6 large nuclear power plants. Over one year, which has 365 * 24 hours (=8760 hours), we get 6.354 GW * 8760h = 55'661 GWh or 55.661 TWh/year.\\ 
+We start to calculate the consumption of Gridcoin closest relative, Bitcoin. 
+We use first the approach explained in [29], where it is assumed that an ASIC miner (a dedicated hash processor) calculates with 1 Watt of power one Gigahash/s. TODO: For example, we look at a common bitcoin ASIC hardware like the Antminer S9. This device computes 14 THash/s using 1350 W of power, so 14'000 GHash/s/1350W = 10.37 GHash/Wm this makes our assumption 10 times smaller. END TODO. According to [26], bitcoin speed on August 26, 2017 was 6'354'668.57 terahash/s or 6'354'668'570 gigahash/s or 6'354'668'570 W. These are 6.354 GW of power. They are equivalent to the power produced by 6 large nuclear power plants. Over one year, which has 365 * 24 hours (=8760 hours), we get 6.354 GW * 8760h = 55'661 GWh or 55.661 TWh/year.\\ 
 
 By comparison, the Swiss Federal Railways consume about 3 TWh/year, and CERN in Geneva 1TWh/year.
 
@@ -17,10 +18,18 @@ The Bitcoin Energy Consumption Index assumes that miners will ultimately spend 6
 
 Price movements can be small or large, but new energy-hungry machines won't all appear overnight. Realistic behaviour is introduced by linking price dynamics to the expected time required for producers to fully respond to a changing situation. [27]
 
-//TODO: add the same for Ethereum\\
+Ethereum, another common cryptocurrency consumes with the above method 5.5 TWh of power in one year [28].\\
+
+To calculate power consumption of BOINC on September 2, 2017, we look first at the daily cobblestones added in this day: 3'300'282'122 cobblestones. The subset of Gridcoin users did 489'559'755. These numbers roughly compare to the numbers used in the previous chapter to estimate BOINC and gridcoin speed, taken on August, 22, 2017. We now take following assumption: half of the cobblestones are computed with a standard CPU like an Intel Core i5 and half with an average GPU like Nvidia GTX 1060. The Intel Core i5 features 4 cores times 4.57 GFlops = 18.28 GFlops with 77W and the 1060 graphic card does 3'850 GFlops with 120W of power. By diving by 200 we get first the speed in GFlops on September 2, 2017: 16'501'410 GFlops for BOINC and 2'447'799 GFlops for Gridcoin. Power calculation of Boinc becomes:
+
+\[ 16501410/2 \times 77/18.28 + 16501410/2 \times 120/3850 = 35011228 W = 35.011 MW \]
+\[ 35.011MW \times 24 h \times 365 days = 306696 MWh = 0.307 TWh \]
+
+//TODO: find something which consumes 35MW of power for comparison...\\
+In one year, BOINC consumes about 0.307 TWh. Similarly, Gridcoin power calculation gets:
+
+\[ 2447799/2 \times 77/18.28 + 2447799/2 \times 120/3850 = 5193522 W = 5.193 MW \]
+\[ 5.193MW \times 24 h \times 365 days = 45491 MWh = 0.045 TWh \]
+//TODO: find something that consumes 5MW of power for comparioson...\\
 
 
-//TODO: add estimate for BOINC users\\
-//TODO: add estimate for gridcoin users\\
-
-//TODO: Calculate CO2 impact. 
