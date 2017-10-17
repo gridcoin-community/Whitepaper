@@ -2,17 +2,48 @@
 
 Gridcoin does not only want to reward holders of the coin (as in pure Proof of Stake coins such as Peercoin [2]), but wants to reward researchers. Because of this there is an additional reward depending on the amount of research done. This information is read from a superblock. In some blocks, so called superblocks, the majority opinion from the distributed Neural Network, which user has done how much work is also saved as a hash. These blocks are generated once a day. The current amount of research done by each CPID stored in the last superblock can be viewed on [SUPER]. If a node gets chosen and the hash this node contains about the amount of work done by each user is the same as the majority hash stored in the Neural Network, then this node gets to stake the next block and everything starts again. If the hash is not the same as the majority hash, the node gets punished for trying to cheat the system and does not stake, as in any other consensus based cryptocurrency. The actual reward the node gets then depends on the \textit{RAC} (Recently Averaged Credit [22]) for each project for this user as stored in the superblock.\\
 
+\subsection{Cobblestone}
+
 To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The \textit{cobblestone} is a unit of measure defined as follows: it is 1/200 day (=7 minutes and 12 seconds, 432 seconds) of CPU time on a reference computer that does 1 Gigaflop (= 1 billion floating point operations per second) based on the Whetstone benchmark. A \textit{cobblestone} in other words correspond to 432 seconds * 1 Gigaflop = 432 billion floating point operations.\\
+
+
+\subsection{Recently Averaged Credit (RAC)}
 
 Recently Averaged Credit is computed as follows: the daily average of cobblestones in last week plus half of the daily average of cobblestones during two weeks ago plus fourth of the daily average during three weeks ago and so on. Following explanation and figures are taken from [31]:\\
 
-First, we define a halflife function over seven days (t is given in days):\\
+First, we define a decay function over seven days (t is given in days):\\
 
 \begin{equation}
 d(t) =  \mathrm{e}^{-t \cdot  ln(2) / 7}  
 \end{equation}
 
- 
+As you can see in the graph below after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
+
+\begin{center}
+\includegraphics{figures/halflife}
+\end{center}
+
+We now take an infinite impulse response low-pass filter with $\alpha$ as smoothing factor:
+
+\begin{equation}
+new_value = \alpha \cdot old_value + (1-\alpha) * new_input
+\end{equation}
+
+The following graph gives an impression on how the above function behaves. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. This is called low pass because the output will only follow slow changes, at relevantly low frequencies. The input’s fast short jump to 2 didn’t really make it to the output. [31]\\
+
+\begin{center}
+\includegraphics{figures/low-pass}
+\end{center}
+
+To get the formula for Recent Average Credit, we use the decay function $d(t)$ as smoothing facgtor in the infinite impulse response low pass filter:
+
+\begin{equation}
+RAC(new) = RAC(old) \cdot d(t) + (1-d(t)) \cdot credit(new)
+\end{equation}
+
+where $credit(new)$ is the credit for a calculated workunit issued in instant $t$.
+
+\subsection{Gridcoin Payout to a user running multiple projects}
 
 We hereby define:
 \begin{description}
