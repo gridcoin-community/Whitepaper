@@ -4,7 +4,15 @@ Gridcoin does not only want to reward holders of the coin (as in pure Proof of S
 
 To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The \textit{cobblestone} is a unit of measure defined as follows: it is 1/200 day (=7 minutes and 12 seconds, 432 seconds) of CPU time on a reference computer that does 1 Gigaflop (= 1 billion floating point operations per second) based on the Whetstone benchmark. A \textit{cobblestone} in other words correspond to 432 seconds * 1 Gigaflop = 432 billion floating point operations.\\
 
-Recently Averaged Credit is computed as follows: the daily average of cobblestones in last week plus half of the daily average of cobblestones during two weeks ago plus fourth of the daily average during three weeks ago and so on.\\ 
+Recently Averaged Credit is computed as follows: the daily average of cobblestones in last week plus half of the daily average of cobblestones during two weeks ago plus fourth of the daily average during three weeks ago and so on. Following explanation and figures are taken from [31]:\\
+
+First, we define a halflife function over seven days (t is given in days):\\
+
+\begin{equation}
+d(t) =  \mathrm{e}^{-t \cdot  ln(2) / 7}  
+\end{equation}
+
+ 
 
 We hereby define:
 \begin{description}
