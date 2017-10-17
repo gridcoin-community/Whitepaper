@@ -26,7 +26,7 @@ As you can see in the graph below after one week the value is exactly halve, a w
 We now take an infinite impulse response low-pass filter with $\alpha$ as smoothing factor:
 
 \begin{equation}
-new_value = \alpha \cdot old_value + (1-\alpha) * new_input
+new\_value = \alpha \cdot old\_value + (1-\alpha) * new\_input
 \end{equation}
 
 The following graph gives an impression on how the above function behaves. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. This is called low pass because the output will only follow slow changes, at relevantly low frequencies. The input’s fast short jump to 2 didn’t really make it to the output. [31]\\
