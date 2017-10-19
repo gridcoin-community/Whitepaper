@@ -9,7 +9,7 @@ To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The 
 
 \subsection{Recently Averaged Credit (RAC)}
 
-Recently Averaged Credit is computed as follows: the daily average of cobblestones in last week plus half of the daily average of cobblestones during two weeks ago plus fourth of the daily average during three weeks ago and so on. Following explanation and figures are taken from [31]:\\
+Recently Averaged Credit is calculated every time a user is granted new credit in form of cobblestones. Credits are exponentially averaged with a given half life of one week. Following explanation and figures are taken from [31]:\\
 
 First, we define a decay function over seven days (t is given in days):\\
 
