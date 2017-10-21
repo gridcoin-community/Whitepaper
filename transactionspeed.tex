@@ -2,7 +2,7 @@
 
 TODO:
 Bitcoin [1] transaction speed is 7 TPS. Ethereum is 14 TPS.
-Visa/Mastercard is 30'000 TPS.
+Visa/Mastercard is 30'000 TPS. Bitshares claims it is 100'000 TPS.          
 
 \subsection{Segregated Witness}
 possible implementation in gridcoin? 
@@ -10,6 +10,17 @@ block size for sure, but compressing step?
 TODO: ask developers
 
 \subsection{Proximity of neighbours}
+
+Most blockchain algorithms are built over a random network. Each node connects randomly to other nodes regardless of their network position. To improve transaction speed it would be advisable to choose neighbours which are in proximity of the node seeking new connections.  The node could traverse periodically existing connections and establish with a metric how far the node is. It could prune the connections which are farthest and substitute them with other random connections.
+
+There are several metrics which could be used:
+
+\begin{itemize}
+	\item Using geographical position as approximation for network proximity: there are geolocation services that can extract an approximate geographical position starting from an IP number.
+          \item Using network hop count and latency: the node could ping each existing connection and retrieve how many nodes are in between (network hop count) and how much time a packet needs to reach the other node (network latency).
+\end{itemize}
+
+The above mentioned algorithm should be tailored so that the network keeps connected to avoid islands with their own fork of the blockchain.
 
 \comm{
 describe proposal about having nodes connecting to geographical neighbours and still have some random connections.
