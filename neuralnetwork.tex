@@ -1,8 +1,8 @@
 \section{Neural Network}
 
-TODO: explain that the name is misleading.
+This chapter starts with a disclaimer as the Gridcoin Neural Network does not share anything with neural networks as commonly defined in the field of Artificial Intelligence. Gridcoin Neural Network is charged with assigning Gridcoins to BOINC researchers. It boils down to a simple proportional calculation as we will see in the next chapters.
 
-Gridcoin uses a distributed system to come to a consensus how much work was done by each user. For this each node (Gridcoin client) asks each BOINC project server, what  the current RAC of each member of team Gridcoin is. Using the Google Distributed File System [21] the nodes exchange the information regarding which user has done how much work. This information is hashed, so each node does not see the exact information from each other node, but the hash can be compared and it can be found out, if the hash of this node is the same as the majority hash of all nodes.
+Gridcoin uses a distributed system to come to a consensus how much work was done by each user. For this each node of the network, each Gridcoin client in other words, asks each BOINC project server, what the current Recently Averaged Credit of each member of team Gridcoin is. This information is mined in a special block called superblock. This information is hashed, so each node does not see the exact information from other nodes, but the hash can be compared and it can be found out, if the hash of this node is the same as the majority hash of all nodes.
 
-To become a part of the Neural Network, a researcher?s Gridcoin client has to send a ?beacon? containing the CPID and the wallet?s address. This is a transaction with a very small amount of Gridcoins, that links  the CPID  and wallet-address of this researcher in  its meta-information, so that this information is now forever stored in the blockchain.
+To become a part of the Neural Network, a researcher's Gridcoin client has to send a beacon (a special network packet) containing the CPID and the wallet's address. This is a transaction with a very small amount of Gridcoins that links  the CPID  and wallet-address of this researcher in its meta-information, so that this information is now forever stored in the blockchain.
 
