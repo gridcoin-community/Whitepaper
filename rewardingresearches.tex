@@ -19,9 +19,15 @@ d(t) =  \mathrm{e}^{-t \cdot  ln(2) / 7}
 
 As you can see in the graph below after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
 
-\begin{center}
+
+\begin{figure}
+\centering
 \includegraphics{figures/halflife}
-\end{center}
+\medskip
+\caption{\textit{Decay function d(t) with a half life of 7 days }}
+\small
+\end{figure}
+
 
 We now take an infinite impulse response low-pass filter with $\alpha$ as smoothing factor:
 
@@ -31,9 +37,13 @@ new\_value = \alpha \cdot old\_value + (1-\alpha) * new\_input
 
 The following graph gives an impression on how the above function behaves. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. This is called low pass because the output will only follow slow changes, at relevantly low frequencies. The input’s fast short jump to 2 didn’t really make it to the output. [31]\\
 
-\begin{center}
+\begin{figure}
+\centering
 \includegraphics{figures/low-pass}
-\end{center}
+\caption{\textit{A low pass filter in action smooths spikes and dips}}
+\small
+\end{figure}
+
 
 To get the formula for Recent Average Credit, we use the decay function $d(t)$ as smoothing facgtor in the infinite impulse response low pass filter:
 
