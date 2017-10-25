@@ -3,29 +3,37 @@
 \subsection{Terminology}
 
 \begin{itemize}
-  \item \textit{bitcoin} : TODO
-  \item \textit{peercoin} : TODO
-  \item \textit{gridcoin} : TODO
-  \item \textit{ethereum} : TODO
-  \item \textit{golem} : TODO
-  \item \textit{cryptocurrency} : TODO
-  \item \textit{BOINC} : TODO
-  \item \textit{CPID} : TODO
-  \item \textit{beacon} : TODO
-  \item \textit{BOINC server} : TODO
-  \item \textit{BOINC project} : TODO
-  \item \textit{BOINC client} : TODO
-  \item \textit{cobblestone} : TODO
-  \item \textit{RAC} : TODO
-  \item \textit{Gridcoin "neural network"} : 
-  \item \textit{superblock} : TODO
-  \item \textit{Proof of Work} : TODO
-  \item \textit{Proof of Stake} : TODO
-  \item \textit{Proof of Research} : TODO
-  \item \textit{transaction} : TODO
-  \item \textit{block} : TODO
-  \item \textit{blockchain} : TODO
-  \item \textit{consensus} : TODO
-  \item \textit{51\% attack} : TODO
-  
+  \item \textit{51\% attack} : A 51\% attack is a situation where more than half of the computing power on a network is operated by a single individual or concentrated group, which   gives them complete and total control over a network. Things that an entity with 51\% of the computing power can do include, but are not limited to: [39]\\
+  \begin{itemize}
+	\item Halting all mining.
+	\item Halting and manipulating all interpersonal transactions.
+	\item Use singular coins over and over.
+  \end{itemize}
+  \item \textit{bitcoin} : The first digital currency able to decentralize the account's ledger by means of a blockchain. 
+  \item \textit{beacon} : A beacon is a particular network transaction containing the CPID of a user to signal the network that this user is starting to calculate valid scientific research.
+  \item \textit{block} : Blocks are essentially pages in a ledger or record keeping book. Blocks are the files where unalterable data related to the network is permanently stored. Forever. Like eternity.
+  \item \textit{blockchain} : A blockchain is a data system that allows for the creation of a digital ledger of transactions on a non-centralized network. Cryptography is the main operator that allows for users to engage with the ledger without the need for any central figurehead. In layman’s terms, this means that people and computers all over work together to create a network instead of a network being made by one single person or company. This network is enabled and protected through cryptography! We have seen this used in currency, data transfer and on. The blockchain is comprised of “blocks” and is constantly growing as each new record, datum, or block is added onto the chain for everyone to see. [39]
+  \item \textit{BOINC} : Berkeley Open Infrastructure for Network Computing is a software which allows to donate computational time to scientific research. It is possible to participate to several projects, each run by different and recognized scientific institutions. It is a client/server architecture. Clients calculate tasks in form of work units and report them to servers running the BOINC project software.
+  \item \textit{BOINC client} : A BOINC client runs on a users's computer, mini-PC (e.g. Raspberry Pi), cellphone, tablet, or any other device with a CPU (watches might come in the future). It downloads work units from a BOINC server and processes them. When results are available, it reports them back to the BOINC server.
+  \item \textit{BOINC server} : A BOINC server runs a particular BOINC project. It distributes work unit to BOINC clients and collects the submitted results, once the workunits are calcuated by the client.
+  \item \textit{BOINC project} : A BOINC project is an umbrella for several tasks which are distributed by a recognized scientific institution. A BOINC project publishes scientific results from time to time after enough work units are processed.
+  \item \textit{cobblestone} : A cobblestone corresponds to 432 billion floating point operations, 432 gigaflops or 0.432 teraflops.
+  \item \textit{consensus} : Consensus is agreement achieved over a peer to peer network when all network nodes agree on something, for example a transaction of a digital currency between two users or a reward given to a particular user. It is achieved by cryptographical means. A 51% attack can break it.
+  \item \textit{CPID} : A Cross Project Identifier is assigned to each node running BOINC and it is used to uniquely identify the node both in the gridcoin network and in the BOINC infrastructure.
+  \item \textit{cryptocurrency} : A digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank. [41]
+  \item \textit{ethereum} : The first digital currency to introduce a flexible blockchain by means of a Turing complete virtual machine.
+  \item \textit{Gridcoin} : The first digital currency that rewards users for performing meaningful scientific research.
+  \item \textit{magnitude}: The magnitude in the BOINC network is the ratio between the recent work done by a single node against the work done by the entire BOINC network done on a particular project.
+  \item \textit{"Neural network"} : The Gridcoin neural network is a computation validated by the nodes on the network that decides how many gridcoins each node receives in exchange for the scientific research performed. It is not to be confused with a neural network in the artificial intelligence context.
+  \item \textit{peercoin} : The first digital currency which introduced Proof of Stake to avert the huge energy consumption of Proof of Work.
+  \item \textit{Proof of Work} : Proof of work was a concept originally designed to sieve spam emails and prevent DDOS attacks. A Proof of Work is essentially a datum that is very costly to produce in terms of time and resources, but can be very simply verified by another party. The proof of work for Bitcoin is referred to as a “nonce,” or number used only once. This has been considered an energy intensive alternative to proof of stake as the computers unfortunately have to be on and running, which also drives the market towards centralization of hashing power… which is what the blockchain aims to defeat! [39]
+  \item \textit{Proof of Stake} : Proof of stake has been considered the greener alternative to PoW. Where PoW requires the prover to perform a certain amount of computational work, a proof of stake system requires the prover to show ownership of a certain amount of money, or stake. [39]
+  \item \textit{Proof of Research} : Proof of Research is the novel approach introduced by the Gridcoin network to reward users performing scientific calculations to the benefit of mankind.
+  \item \textit{Recently Averaged Credit (RAC)} : Recently Averaged Credit is a function that calculates the amount of scientific work performed starting from the work units reported by a user to a BOINC project server.
+  \item \textit{Superblock} : A superblock is a specificity of the Gridcoin network. It is a blockchain block that contains how much block which was done by each single user.
+  \item \textit{transaction} : A transaction is a transfer of a cryptocurrency value that is broadcasted to the network and collected into blocks. A transaction typically references previous transaction outputs as new transaction inputs and dedicates all input Bitcoin values to new outputs. Transactions are not encrypted, so it is possible to browse and view every transaction ever collected into a block. Once transactions are buried under enough confirmations they can be considered irreversible.\\
+Standard transaction outputs nominate addresses, and the redemption of any future inputs requires a relevant signature.\\
+All transactions are visible in the block chain, and can be viewed with a hex editor. A block chain browser is a site where every transaction included within the block chain can be viewed in human-readable terms. This is useful for seeing the technical details of transactions in action and for verifying payments. [40]
+  \item \textit{workunit} : A single scientific calculation performed on a BOINC client. A work unit can last from minutes (typically if it is run on a modern graphic card, a GPU) 
+to entire months (some climate simulation can last several weeks).
 \end{itemize}
