@@ -8,16 +8,16 @@
 
 \section{Rewarding Researchers}
 
-Gridcoin does not only want to reward holders of the coin (as in pure Proof of Stake coins such as Peercoin [2]), but wants to reward researchers. Because of this there is an additional reward depending on the amount of research done. This information is read from a superblock. In some blocks, so called superblocks, the majority opinion from the distributed Neural Network, which user has done how much work is also saved as a hash. These blocks are generated once a day. The current amount of research done by each CPID stored in the last superblock can be viewed on [SUPER]. If a node gets chosen and the hash this node contains about the amount of work done by each user is the same as the majority hash stored in the Neural Network, then this node gets to stake the next block and everything starts again. If the hash is not the same as the majority hash, the node gets punished for trying to cheat the system and does not stake, as in any other consensus based cryptocurrency. The actual reward the node gets then depends on the \textit{RAC} (Recently Averaged Credit [22]) for each project for this user as stored in the superblock.\\
+Gridcoin does not only want to reward holders of the coin (as in pure Proof of Stake coins such as Peercoin [2]), but wants to reward researchers. Because of this there is an additional reward depending on the amount of research done. This information is read from a superblock. In some blocks, called superblocks, the majority consensus from the distributed Neural Network, which user has done how much work is also saved as a hash. These blocks are generated once a day. The current amount of research done by each CPID stored in the last superblock can be viewed on [SUPER]. If a node gets chosen and the hash this node contains about the amount of work done by each user is the same as the majority hash stored in the Neural Network, then this node gets to stake the next block and everything starts again. The actual reward the node gets then depends on the \textit{RAC} (Recent Averaged Credit [22]) for each project for this user as stored in the superblock.\\
 
 \subsection{Cobblestone}
 
 To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The \textit{cobblestone} is a unit of measure defined as follows: it is 1/200 day (=7 minutes and 12 seconds, 432 seconds) of CPU time on a reference computer that does 1 Gigaflop (= 1 billion floating point operations per second) based on the Whetstone benchmark. A \textit{cobblestone} in other words correspond to 432 seconds * 1 Gigaflop = 432 billion floating point operations.\\
 
 
-\subsection{Recently Averaged Credit (RAC)}
+\subsection{Recent Averaged Credit (RAC)}
 
-Recently Averaged Credit is calculated every time a user is granted new credit in form of cobblestones. Credits are exponentially averaged with a given half life of one week. Following explanation and figures are taken from [31]:\\
+Recent Averaged Credit is calculated every time a user is granted new credit in form of cobblestones. Credits are exponentially averaged with a given half life of one week. Following explanation and figures are taken from [31]:\\
 
 First, we define a decay function over seven days (t is given in days):\\
 
@@ -66,11 +66,11 @@ where $credit(new)$ is the credit in cobblestones for a calculated workunit issu
 We hereby define:
 \begin{description}
   \item{$\gamma$} : this is the average \textit{RAC} done by a user on a particular BOINC project \textit{p} since last payment to user \textit{u} identified by \textit{CPID}.
-  \item{$\Gamma$} : this is the average \textit{RAC} done by all users partecipating in Gridcoin on a particular BOINC project \textit{p} since last payment to user \textit{u}.
+  \item{$\Gamma$} : this is the average \textit{RAC} done by all users participating in Gridcoin on a particular BOINC project \textit{p} since last payment to user \textit{u}.
   \item{$\tau$} : this is the time expressed in days since last payment to user \textit{u}.
   \item{$\Theta$} : this is the available Gridcoin supply per day assigned to BOINC project \textit{p}
   \item{$G$} : this is the constant number of Gridcoins created per day on the Gridcoin network. 
-  \item{$n$} : this is the number of BOINC projects in the whitelist [42]. Partecipants in whitelisted projects do receive a reward in Gridcoins for their computational effort.  
+  \item{$n$} : this is the number of BOINC projects in the whitelist [42]. Participants in whitelisted projects do receive a reward in Gridcoins for their computational effort.  
 \end{description}
 
 The ratio
