@@ -65,8 +65,25 @@ On the mentioned website there are also instructions about mining in a common po
 
 \subsection{Mining Pool}
 
-//TODO add something here
+If users do not manage to get some starter coins, available from faucets, or if they lack the experience to buy them from exchanges, they have the possibility to join the Gridcoin Mining Pool [55]. The steps involved to become a pool miner are:
+
+\begin{enumerate}
+  \item Register to GRCpool.com and select projects in which to partecipate
+  \item Install BOINC
+  \item Add GRCpool as account manager in BOINC. BOINC will download the selected projects in step 1. BOINC will submit computed results under the CPID of GRCpool.
+  \item GRCpool will credit the user's balance on the website depending on how much work was performed 
+  \item Install the Gridcoin wallet in investor mode, without linking it to BOINC. Create a new Gridcoin address 
+  \item Login into GRCpool.com and move the credited Gridcoins to the local wallet by using the newly created Gridcoin address
+\end{enumerate}
+
+Mining with the pool is easier to setup, but has two main drawbacks: the user does not increment his own BOINC statistics, but the ones of the  mining pool. The user is not able to vote in polls issued by the network (see chapter 9)
+
+\subsection{Mining on several devices}
+
+No matter if the user mines solo or in the pool: it is enough to setup one Gridcoin wallet linked to same BOINC credentials. All devices that compute will install BOINC and use the same credentials. Currently it is possible to mine Gridcoins on cell phones, tablets, mini PC (think Raspberry Pi and its clones), desktops, gamer's PCs, playstations, high end servers and on advanced mining equipment using both CPU and GPUs.\\
+
+In a foreseable future, it will possible to mine Gridcoins even on a user's smartwatch and on any computing device. If the Internet of Things becomes reality, even on fridges and other electronic devices!
 
 \subsection{Integrating Gridcoin in existing exchanges}
 
-For exchanges that want to integrate Gridcoin in their infrastructure the client can be run entirely in textual mode out of a Linux bash shell. The daemon named \textit{Gridcoinresearchd} implements the same commands with the same syntax as \textit{bitcoind}, making the integration of Gridcoin in the existing exchange infrastructure quick and easy.\\
+For exchanges that want to integrate Gridcoin in their infrastructure the client can be run entirely in textual mode out of a Linux bash shell. The daemon named \textit{gridcoinresearchd} implements the same commands with the same syntax as \textit{bitcoind}, making the integration of Gridcoin in the existing exchange infrastructure quick and easy.\\
