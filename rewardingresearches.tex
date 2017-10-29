@@ -8,16 +8,16 @@
 
 \section{Rewarding Researchers}
 
-Gridcoin does not only want to reward holders of the coin (as in pure Proof of Stake coins such as Peercoin [2]), but wants to reward researchers. Because of this there is an additional reward depending on the amount of research done. This information is read from a superblock. In some blocks, called superblocks, the majority consensus from the distributed Neural Network, which user has done how much work is also saved as a hash. These blocks are generated once a day. The current amount of research done by each CPID stored in the last superblock can be viewed on [SUPER]. If a node gets chosen and the hash this node contains about the amount of work done by each user is the same as the majority hash stored in the Neural Network, then this node gets to stake the next block and everything starts again. The actual reward the node gets then depends on the \textit{RAC} (Recent Averaged Credit [22]) for each project for this user as stored in the superblock.\\
+Gridcoin does not only want to reward holders of the coin (as in pure Proof of Stake coins such as Peercoin [2]), but wants to reward researchers. Because of this there is an additional reward depending on the amount of research done. This information is read from a superblock. In some blocks, called superblocks, the majority consensus from the distributed Neural Network, which user has done how much work is also saved as a hash. These blocks are generated once a day. The current amount of research done by each CPID stored in the last superblock can be viewed on \texttt{www.gridcoinstats.eu}. If a node gets chosen and the hash this node contains about the amount of work done by this user is the same as the majority hash stored in the Neural Network, then this node gets to stake the next block and everything starts again. The actual reward the node gets then depends on the \textit{RAC} (Recent Average Credit [22]) for each project for this user as stored in the superblock.\\
 
 \subsection{Cobblestone}
 
-To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The \textit{cobblestone} is a unit of measure defined as follows: it is 1/200 day (=7 minutes and 12 seconds, 432 seconds) of CPU time on a reference computer that does 1 Gigaflop (= 1 billion floating point operations per second) based on the Whetstone benchmark. A \textit{cobblestone} in other words correspond to 432 seconds * 1 Gigaflop = 432 billion floating point operations.\\
+To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The \textit{cobblestone} is a unit of measure defined as follows: it is 1/200 day (=7 minutes and 12 seconds or 432 seconds) of CPU time on a reference computer that does 1 Gigaflop (= 1 billion floating point operations per second) based on the Whetstone benchmark. A \textit{cobblestone} in other words correspond to 432 seconds * 1 Gigaflop = 432 billion floating point operations.\\
 
 
-\subsection{Recent Averaged Credit (RAC)}
+\subsection{Recent Average Credit (RAC)}
 
-Recent Averaged Credit is calculated every time a user is granted new credit in form of cobblestones. Credits are exponentially averaged with a given half life of one week. Following explanation and figures are taken from [31]:\\
+Recent Average Credit is calculated every time a user is granted new credit in form of cobblestones. Credits are exponentially averaged with a given half life of one week. Following explanation and figures are taken from [31]:\\
 
 First, we define a decay function over seven days (t is given in days):\\
 
@@ -25,7 +25,7 @@ First, we define a decay function over seven days (t is given in days):\\
 d(t) =  \mathrm{e}^{-t \cdot  ln(2) / 7}  
 \end{equation}
 
-As you can see in the graph below after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
+As you can see in the chart after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
 
 
 \begin{figure}
@@ -43,7 +43,7 @@ We now take an infinite impulse response low-pass filter with $\alpha$ as smooth
 new\_value = \alpha \cdot old\_value + (1-\alpha) * new\_input
 \end{equation}
 
-The following graph gives an impression on how the above function behaves. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. This is called low pass because the output will only follow slow changes, at relevantly low frequencies. The input’s fast short jump to 2 didn’t really make it to the output. [31]\\
+The following graph gives an impression on how the above filter function behaves. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. This is called low pass because the output will only follow slow changes, at relevantly low frequencies. The input’s fast short jump to 2 did not really make it to the output. [31]\\
 
 \begin{figure}
 \centering
@@ -53,7 +53,11 @@ The following graph gives an impression on how the above function behaves. As th
 \end{figure}
 
 
-To get the formula for Recent Average Credit, we use the decay function $d(t)$ as smoothing facgtor in the infinite impulse response low pass filter:
+To get the formula for Recent Average Credit, we use the decay function $d(t)$ as smoothing factor in the infinite impulse response low pass filter:
+
+\begin{equation}
+\alpha=d(t)
+\end{equation}
 
 \begin{equation}
 RAC(new) = RAC(old) \cdot d(t) + (1-d(t)) \cdot credit(new)
@@ -65,12 +69,12 @@ where $credit(new)$ is the credit in cobblestones for a calculated workunit issu
 
 We hereby define:
 \begin{description}
-  \item{$\gamma$} : this is the average \textit{RAC} done by a user on a particular BOINC project \textit{p} since last payment to user \textit{u} identified by \textit{CPID}.
-  \item{$\Gamma$} : this is the average \textit{RAC} done by all users participating in Gridcoin on a particular BOINC project \textit{p} since last payment to user \textit{u}.
+  \item{$\gamma$} : this is the \textit{RAC} done by a user on a particular BOINC project \textit{p} since last payment to user \textit{u} identified by \textit{CPID}.
+  \item{$\Gamma$} : this is the \textit{RAC} done by all users participating in Gridcoin on a particular BOINC project \textit{p} since last payment to user \textit{u}.
   \item{$\tau$} : this is the time expressed in days since last payment to user \textit{u}.
   \item{$\Theta$} : this is the available Gridcoin supply per day assigned to BOINC project \textit{p}
   \item{$G$} : this is the constant number of Gridcoins created per day on the Gridcoin network. 
-  \item{$n$} : this is the number of BOINC projects in the whitelist [42]. Participants in whitelisted projects do receive a reward in Gridcoins for their computational effort.  
+  \item{$n$} : this is the number of BOINC projects in the Whitelist [42]. Participants in whitelisted projects do receive a reward in Gridcoins for their computational effort.  
 \end{description}
 
 The ratio
