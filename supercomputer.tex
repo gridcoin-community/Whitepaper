@@ -1,5 +1,7 @@
 \subsection{Gridcoin as TOP 500 Supercomputer}
 
+TOP 500 at \texttt{www.top500.org} is a worldwide list of existing supercomputers ranked by their computational speed. In this chapter, we calculate the position of BOINC, Gridcoin and Bitcoin.\\
+
 We saw in the previous chapter that one cobblestone (or one BOINC credit) corresponds to 432 billion floating point operations. We try now to extrapolate the current speed of general BOINC users and the subset of BOINC users who run also the Gridcoin client.\\
 
 On \textit{boincstats.com}[24] for August 26, 2017 we read following numbers: on this day BOINC users produced 3'034'366'125 cobblestones. Gridcoin users produced a subset of that amount: 513'112'244 cobblestones. To convert the cobblestones in billion operations per second, we multiply them first by 432, to get the floating points operations done in one day. We then divide by the number of seconds in one day which is 24 hours at 3600 seconds = 86400 seconds.
@@ -21,8 +23,8 @@ We now look at the TOP 500 supercomputer statistics, that it is adjusted every s
 	\item Gridcoin users with 2'565 teraflops are ranked 49th between supercomputers \textit{Tianhe-1A} and \textit{cascade}.
 \end{itemize}
 
-If we forget for one moment that Bitcoin does not allow flexible computations, but consistently attempts to invert only and always the same hash function. What would be Bitcoin ranking in TOP 500 supercomputer list on August 26, 2017? According to [26], Bitcoin speed on this day was 6'354'668.57 terahashes/s 80'704'290.84 petaflops or 80'704'290'840 teraflops. From this numbers we understand that calculating one hash costs 12'700 floating point operations. \\
+If we forget for one moment that Bitcoin does not allow flexible computations, but consistently attempts to invert only and always the same hash function. What would be Bitcoin ranking in TOP 500 supercomputer list on August 26, 2017? According to [26], Bitcoin speed on this day was 6'354'668.57 terahashes/s, 80'704'290.84 petaflops or 80'704'290'840 teraflops. From this numbers we understand that calculating one hash costs 12'700 floating point operations. \\
 
 The stated Bitcoin difficulty of 923'233'068'449 (August 26, 2017) which is a number of 40 binary digits (1101011011110100111110101010010110100001) tells us that a hash needs to have the first 40 bits set at zero in order to get the coinbase reward for the block. To date, the coinbase reward is 12.5 bitcoins (it halves every 4 years, last halving event was in 2016).\\
 
-The fastest supercomputer in TOP 500 list is Sunway TaihuLight of National Supercomputing Center in Wuxi, China with a speed of 125'435.9 teraflops. Bitcoin would be by far the fastet supercomputer in the world and outperform by factor 643'391!
+The fastest supercomputer in TOP 500 list is Sunway TaihuLight of National Supercomputing Center in Wuxi, China with a speed of 125'435.9 teraflops. Bitcoin would be by far the fastest supercomputer in the world and outperform the first ranked supercomputer by factor 643'391!
