@@ -19,13 +19,42 @@ To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The 
 
 Recent Average Credit is calculated every time a user is granted new credit in form of cobblestones. Credits are exponentially averaged with a given half life of one week. Following explanation and figures are taken from [31]:\\
 
-First, we define a decay function over seven days (t is given in days):\\
+First, we define a decay function over seven days (t is given in days), in literature we often see the decay function in this form:\\
 
 \begin{equation}
 d(t) =  \mathrm{e}^{-t \cdot  ln(2) / 7}  
 \end{equation}
 
-As you can see in the chart after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
+We can transform the decay function in this way to reveal its behaviour:
+
+\begin{equation}
+d(t) =  \mathrm{e}^{-t \cdot  ln(2) / 7} = \mathrm{e}^{ln(2) \cdot  -t/7} = \mathrm{e}^{ln(2)^{-t/7}} = 2^{-t/7}
+\end{equation}
+
+\begin{equation}
+d(t) =  2^{-t/7} =  2^{-1^{t/7}} = \frac{1}{2}^{t/7}
+\end{equation}
+
+We evaluate the function at zero, seven, fourteen and $\infty$:
+
+\begin{equation}
+d(0) = \frac{1}{2}^{0} = 1
+\end{equation}
+
+\begin{equation}
+d(7) = \frac{1}{2}^{7/7} = \frac{1}{2}^{1} = \frac{1}{2} 
+\end{equation}
+
+\begin{equation}
+d(14) = \frac{1}{2}^{14/7} = \frac{1}{2}^{2} = \frac{1}{4} 
+\end{equation}
+
+\begin{equation}
+d(\infty) = \frac{1}{2}^{\infty/7} = \frac{1}{2}^{\infty} = 0 
+\end{equation}
+
+
+As you can see in the chart below after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
 
 
 \begin{figure}
