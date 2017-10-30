@@ -19,6 +19,15 @@ To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The 
 
 Recent Average Credit is calculated every time a user is granted new credit in form of cobblestones. Credits are exponentially averaged with a given half life of one week. Following explanation and figures are taken from [31]:\\
 
+\begin{figure}
+\centering
+\includegraphics{figures/halflife}
+\medskip
+\caption{\textit{Decay function d(t) with a half life of 7 days }}
+\small
+\end{figure}
+
+
 First, we define a decay function over seven days (t is given in days), in literature we often see the decay function in this form:\\
 
 \begin{equation}
@@ -54,17 +63,7 @@ d(\infty) = \frac{1}{2}^{\infty/7} = \frac{1}{2}^{\infty} = 0
 \end{equation}
 
 
-As you can see in the chart below after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
-
-
-\begin{figure}
-\centering
-\includegraphics{figures/halflife}
-\medskip
-\caption{\textit{Decay function d(t) with a half life of 7 days }}
-\small
-\end{figure}
-
+As you can see in the chart after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
 
 We now take an infinite impulse response low-pass filter with $\alpha$ as smoothing factor:
 
@@ -72,7 +71,7 @@ We now take an infinite impulse response low-pass filter with $\alpha$ as smooth
 new\_value = \alpha \cdot old\_value + (1-\alpha) * new\_input
 \end{equation}
 
-The following graph gives an impression on how the above filter function behaves. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. This is called low pass because the output will only follow slow changes, at relevantly low frequencies. The input’s fast short jump to 2 did not really make it to the output. [31]\\
+The graph gives an impression on how the above filter function behaves. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. This is called low pass because the output will only follow slow changes, at relevantly low frequencies. The input’s fast short jump to 2 did not really make it to the output. [31]\\
 
 \begin{figure}
 \centering
