@@ -21,45 +21,51 @@ Recent Average Credit is calculated every time a user is granted new credit in f
 
 \begin{figure}
 \centering
-\includegraphics{figures/halflife}
+\includegraphics[scale=0.7]{figures/halflife}
 \medskip
 \caption{\textit{Decay function d(t) with a half life of 7 days }}
 \small
 \end{figure}
 
 
-First, we define a decay function over seven days (t is given in days), in literature we often see the decay function in this form:\\
+First, we define a decay function over seven days (t is given in days), in literature we often see the decay function in this form
 
 \begin{equation}
-d(t) =  \mathrm{e}^{-t \cdot  ln(2) / 7}  
+d(t) =  \mathrm{e}^{-t \cdot  ln(2) / th}  
 \end{equation}
 
-We can transform the decay function in this way to reveal its behaviour:
+with $th$ as the halving parameter of the decay function. We can transform the decay function in this way to reveal its behaviour:
 
 \begin{equation}
-d(t) =  \mathrm{e}^{-t \cdot  ln(2) / 7} = \mathrm{e}^{ln(2) \cdot  -t/7} = \mathrm{e}^{ln(2)^{-t/7}} = 2^{-t/7}
+d(t) =  \mathrm{e}^{-t \cdot  ln(2) / th} = \mathrm{e}^{ln(2) \cdot  -t/th} = \mathrm{e}^{ln(2)^{-t/th}} = 2^{-t/th}
 \end{equation}
 
 \begin{equation}
-d(t) =  2^{-t/7} =  2^{-1^{t/7}} = \frac{1}{2}^{t/7}
+d(t) =  2^{-t/th} =  2^{-1^{t/th}} = \bigg(\frac{1}{2}\bigg)^{t/th}
+\end{equation}
+
+We now set for $th$ the value 7 days, as we want the function to half its value after seven days and get:
+
+\begin{equation}
+d(t) = \bigg(\frac{1}{2}\bigg)^{t/7}
 \end{equation}
 
 We evaluate the function at zero, seven, fourteen and $\infty$:
 
 \begin{equation}
-d(0) = \frac{1}{2}^{0} = 1
+d(0) = \bigg(\frac{1}{2}\bigg)^{0} = 1
 \end{equation}
 
 \begin{equation}
-d(7) = \frac{1}{2}^{7/7} = \frac{1}{2}^{1} = \frac{1}{2} 
+d(7) = \bigg(\frac{1}{2}\bigg)^{7/7} = \bigg(\frac{1}{2}\bigg)^{1} = \frac{1}{2} 
 \end{equation}
 
 \begin{equation}
-d(14) = \frac{1}{2}^{14/7} = \frac{1}{2}^{2} = \frac{1}{4} 
+d(14) = \bigg(\frac{1}{2}\bigg)^{14/7} = \bigg(\frac{1}{2}\bigg)^{2} = \frac{1}{4} 
 \end{equation}
 
 \begin{equation}
-d(\infty) = \frac{1}{2}^{\infty/7} = \frac{1}{2}^{\infty} = 0 
+d(\infty) = \bigg(\frac{1}{2}\bigg)^{\infty/7} = \bigg(\frac{1}{2}\bigg)^{\infty} = 0 
 \end{equation}
 
 
