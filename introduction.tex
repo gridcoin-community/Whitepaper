@@ -2,11 +2,11 @@
 
 \label{sec:intro}
 
-An increased quality of living in a society often coincides with an increase in that society’s ability to freely gather and process data.  Distributed processing, also known as grid computing, offers a tool by which massive quantities of data can be processed at speeds tens of thousands of times faster than any centralized super computer.  This speed is directly proportional to the advancement of processing technology, currently progressing in accordance with Moore’s law. \\
+Since the advent of the Information Age, data collection and analysis have become more and more essential to modern life. The need for fast processing of enormous volumes of data has stimulated exciting innovations in information technology infrastructure. In particular, distributed processing, also known as grid computing, has emerged as an efficient means of processing large scale data by distribution of the workload over a large network of individual processing units.\\ 
 
-At the same time, the Idle Processing Potential (IPP) which already exists in digital societies is severely underutilized.  From cell phones to personal computers to office workstations, the combined IPP of the world overshadows even the most robust decentralized super-computer, Bitcoin.
-Gridcoin seeks to create a decentralized and sustainable distributed processing network which prioritizes both the utilization of IPP and the creation of a free host ecosystem for researchers and individuals with data to process.
-To accomplish this goal, Gridcoin has created a blockchain-based digital asset which rewards individuals and entities which volunteer their IPP to the grid computing network, BOINC.  A single Gridcoin represents the value prescribed to a volunteered unit of IPP on the BOINC network.  The Gridcoin blockchain is secured through Proof of Stake.  Rewards are distributed through a protocol developed by Gridcoin called Distributed Proof of Research, or DPoR.\\
+On the other hand, procuration of such a large number of processing units requires funds and infrastructure typically available only to governments, corporations, and universities. In a competitive funding environment, organizations and individuals with valuable data to process may nevertheless end up excluded from traditional funding channels. Even projects of significant and fundamental interest to humanity may fall under this category, due to their inability to satisfy government and corporate interests or secure short-term monetary returns. \\
+
+Perhaps surprisingly, however, the means to circumvent this barrier are already on hand, sitting on our desks at home or lodged in our pockets: The combined Idle Processing Potential (IPP) of consumer electronic devices overshadows even the most robust decentralized super-computer, Bitcoin. Nevertheless, IPP is severely underutilized. To tap into this potential, Gridcoin seeks to create a decentralized and sustainable distributed processing network which prioritizes both the utilization of IPP and the creation of a free host ecosystem for researchers and individuals with data to process. Towards this end, Gridcoin has created a blockchain-based digital asset which rewards individuals and entities which volunteer their IPP to the grid computing network, BOINC.  A single Gridcoin represents the value prescribed to a volunteered unit of IPP on the BOINC network.  The Gridcoin blockchain is secured through Proof of Stake.  Rewards are distributed through a protocol developed by Gridcoin called Distributed Proof of Research, or DPoR.\\
 
 \begin{figure}
 \centering
@@ -16,26 +16,23 @@ To accomplish this goal, Gridcoin has created a blockchain-based digital asset w
 \small
 \end{figure}
 
+BOINC, The Berkeley Open Infrastructure for Network Computing, is an open source distributed processing network which provides scientists and enthusiasts with means to process computational data for free. In operation since 2002, BOINC has maintained an active community consisting of hundreds of thousands of users. This vast userbase reliably contributes the computational muscle to support a wide range of independent projects, such as mapping the Milky Way galaxy, finding record prime numbers, folding proteins, testing disease cures and vaccines, and searching for extraterrestrial life.\\
 
-BOINC, The Berkeley Open Infrastructure for Network Computing, is an open-source distributed processing network which provides scientists and enthusiasts with means to host computational data for free. BOINC has been operating since 2002 and has and continues to process data that helps map the Milky Way, detect potentially hazardous Near Earth Asteroids (NEOs), find prime numbers, fold proteins, test cures and vaccines, test chemical and molecular combinations, Search for Extraterrestrial Life (SETI) and more.\\
+By directly rewarding those who volunteer their idle processing power to BOINC, Gridcoin creates an ecosystem in which valuable data, or a worthwhile project, is defined by an "open market of science" instead of a market of "pay-to-play".  In other words, volunteers will move their IPP to projects in which they find intrinsic value. This eliminates the bias towards the researchers and organizations who happen to have the most funding.\\
 
-By directly rewarding those who volunteer their idle processing power to BOINC, Gridcoin creates an ecosystem in which valuable data, or a worthwhile project, is defined by an "open market of science" instead of a market of "pay-to-play".  In other words, volunteers will move their IPP to projects which they deem of value with no need to consider the reward they will receive.\\
-
-Although there are other configurations, a typical node runs both the BOINC client to download, execute and report results of scientific computations and the Gridcoin client. The Gridcoin client performs several functions: like a Bitcoin wallet it allows users to transfer money from different addresses, it keeps the blockchain with transactions up to date talking to other nodes and verifying each new block for validity and tries to stake other blocks on the blockchain by collecting new transactions. The coinstake in the proposed new blocks for the own wallet corresponds to the amount of work done on BOINC expressed in Gridcoins.\\
+A typical node on the Gridcoin network runs two clients: 1) the BOINC client, which manages the downloading and processing of data, and 2) the Gridcoin client, which interfaces with other nodes on the Gridcoin network. Like a Bitcoin wallet, the Gridcoin client allows users to transfer money to and from different addresses. Moreover, it contributes to the overall health of the network by verifying each new block and, depending on the configuration, itself staking new blocks. The coinstake in the new blocks proposed by any given wallet corresponds to an associated amount of work done on BOINC, expressed in Gridcoins.\\
 
 \subsection{BOINC}
 
-BOINC is a system for distributing the workload of scientific simulations. Users of BOINC have a client running that solves work units (WU) for specific projects. A work unit consists of code and specific parameters for which the code is run.  After the work unit is completed the BOINC client sends back the results to the BOINC servers, where the results are analyzed.\\
+BOINC users run a client which downloads and manages the processing of work units (WU) for specific projects. A work unit consists of executable code and specific parameters for which the code is run.  After the work unit is completed the BOINC client returns the results to the BOINC servers.
 
-One example for a BOINC project is the World Community Grid [11], which consists of various other projects, for example to fight cancer or beat Ebola. SETI@home [20], which looks for signs of alien life by monitoring electromagnetic radiation from space for patterns, is another well-known project.  In total there are about 40 BOINC projects, but only the BOINC projects on the Whitelist help users earn Gridcoins. The complete Whitelist is available in the appendix of this document.\\
+An example BOINC project is the World Community Grid [11], which is composed of various research initiatives with a humanitarian focus, for instance fighting cancer or curing Ebola. SETI@home [20], which scans radio waves from space for signs of alien life, is another well-known project.  In total there are over 40 BOINC projects, but only the BOINC projects on the Whitelist help users earn Gridcoins. The complete Whitelist is available in the appendix. Each Gridcoin wallet can vote in polls concerning which projects enter or exit the Whitelist. New projects with interesting computational tasks have a high chance of getting on the Whitelist, while projects which do not have a constant supply of work units tend to be dropped. \\
 
-Each Gridcoin wallet can vote in polls about which projects can enter or exit the whitelist. New projects with interesting computational tasks enter it often and projects which do not have a constant supply of work units tend to be dropped by people's vote. \\
+The computational output of a given Gridcoin user is measured and stored on the BOINC server. The unit of work is a cobblestone, which on a project-by-project basis is converted into a certain number of "credits".  While credits accumulate over time, computational \textit{power} is measured by the Recent Average Credit (RAC), defined roughly as the average amount of credits earned per day. These units of measure are discussed later on in this whitepaper.\\
 
-The information which researcher has computed how many work units is stored on the BOINC server. The unit of work done is a credit or cobblestone.  The Recent Average Credit (RAC) is the average amount of credits earned per day. Cobblestone and RAC are discussed later on in this whitepaper.\\
+A CPID (Cross Project Identifier) is a unique identifier on the BOINC network that links the contributions of a single user to different projects. Knowledge of a user's CPID allows anyone to view the contributions of that user to BOINC projects.\\
 
-A CPID (Cross Project Identifier) is a number that links together the participation of a single user in all the different projects with a single common identifier, with a CPID one can see the research done by one user over all different projects this user participates in.\\
-
-There are also teams in BOINC, users can join teams and the work done by each member of the team is added to get the work done by the team. It is necessary for a Gridcoin-researcher to be a part of team \textit{Gridcoin}, which on some projects is listed as \textit{gridcoin}, lowercase.
+Finally, BOINC also allows the creation of teams. When a user joins a team, the work done by that member is added to the total work done by the team. To earn Gridcoin, a user must join team \textit{Gridcoin}, which on some projects is listed as \textit{gridcoin}, lowercase.
 
 \begin{figure}
 \centering
@@ -47,45 +44,42 @@ There are also teams in BOINC, users can join teams and the work done by each me
 
 \subsection{Gridcoin Client}
 
-The Gridcoin Client is very similar to a Bitcoin client, inheriting substantial portions of source code from it. It is sometimes called a wallet, because it stores the Gridcoins owned by a user. The client allows users to receive and send Gridcoins to other clients. If it is attached to BOINC, it tries to mine blocks by collecting transactions and by showing that there was actual BOINC research done. From time to time, the client stakes Gridcoins so that they earn interest.
+The Gridcoin Client is very similar to a Bitcoin client, inheriting substantial portions of source code from it. It is sometimes called a wallet, because it stores the Gridcoins owned by a user. The client allows users to receive and send Gridcoins to other clients. If it is attached to BOINC, it is able to mine blocks which reward the user for work done on BOINC. The client also occasionally stakes Gridcoins so that they earn interest.
 
 \subsection{Setting Up a Network Node to Earn Gridcoins}
 
-To setup BOINC and the Gridcoin client to earn Gridcoins by running scientific simulations on your computer please follow the tutorials on www.gridcoin.us
-
-The steps involved to become a solo miner are:
+Tutorials for setting up BOINC and the Gridcoin client are available on www.gridcoin.us. Briefly, the steps to become a solo miner are as follows:
 \begin{enumerate}
-  \item Install BOINC
-  \item Add projects to BOINC that belong to the Whitelist [42]
-  \item Install and configure the Gridcoin wallet so that it is linked to BOINC 
-  \item Acquire Gridcoins by buying them on exchanges and move them to your wallet
-  \item Send a beacon so that the wallet CPID is persisted in the blockchain
-  \item Wait until the Gridcoin client manages to stake its first block with Proof of Stake and Proof of Research reward for your wallet.
+  \item Install BOINC.
+  \item Add projects to BOINC that belong to the Whitelist [42].
+  \item Install and configure the Gridcoin wallet so that it is linked to BOINC.
+  \item Acquire Gridcoins by buying them on exchanges and transferring them to your wallet.
+  \item Send a beacon so that the wallet CPID is present in the blockchain.
 \end{enumerate}
+With proper setup, the client can begin staking blocks and rewarding the miner with Gridcoin. The odds of staking a block are proportional to the number of coins owned; the expected time until the next block is staked can be estimated from within the client. Note, however, that this is only an estimate of the average: the actual time to stake a block may be smaller or larger.
 
-On the mentioned website there are also instructions about mining in a common pool. There is also the possibility to be an investor by owning Gridcoins and running the Gridcoin client without being a BOINC researcher. In the latter case, the investor earns some interest on the Gridcoins they own, simply by running the wallet.\\
+On the aforementioned website there are also instructions about mining in a common pool, which in contrast with solo mining has the advantage of consistent and predictable payouts. There is also the possibility to be an \textit{investor} simply by owning Gridcoins and running the Gridcoin client (without needing to be a BOINC researcher). In the latter case, the investor earns interest on the Gridcoins they own, simply by running the wallet.\\
 
 \subsection{Mining Pool}
 
-If users do not manage to get some starter coins, available from faucets, or if they lack the experience to buy them from exchanges, they have the possibility to join the Gridcoin Mining Pool [55]. Steps to become a pool miner are:
+If users do not manage to get some starter coins, available from faucets, or if they lack the experience to buy them from exchanges, they have the possibility to join the Gridcoin Mining Pool [55]. Steps to become a pool miner are as follows:
 
 \begin{enumerate}
-  \item Register to GRCpool.com and select projects in which to partecipate
-  \item Install BOINC
-  \item Add GRCpool as account manager in BOINC. BOINC will download the selected projects in step 1. BOINC will submit computed results under the CPID of GRCpool.
-  \item GRCpool will credit the user's balance on the website depending on how much work was performed 
-  \item Install the Gridcoin wallet in investor mode, without linking it to BOINC. Create a new Gridcoin address 
+  \item Register with GRCpool.com and select projects in which to participate.
+  \item Install BOINC.
+  \item Add GRCpool as account manager in BOINC. BOINC will download the selected projects in step 1. BOINC will submit computed results under the CPID of GRCpool. Thus, GRCpool will credit the user's balance on the website depending on how much work was performed. 
+  \item Install the Gridcoin wallet in investor mode, without linking it to BOINC. Create a new Gridcoin address.
   \item Login into GRCpool.com and move the credited Gridcoins to the local wallet by using the newly created Gridcoin address
 \end{enumerate}
 
-Mining with the pool is easier to setup, but has two main drawbacks: the user does not increment his own BOINC statistics, but the ones of the  mining pool. The user is not able to vote in polls issued by the network (see chapter 9).
+Mining with the pool is easier to setup, but has two main drawbacks. First, the user does not inherit his/her own BOINC statistics. Instead, these are formally credited to the mining pool. Second, the user is not able to vote in polls issued by the network (see chapter 9).
 
 \subsection{Mining on Several Devices}
 
-No matter if the user mines solo or in the pool: it is enough to setup one Gridcoin wallet linked to same BOINC credentials. All devices that compute will install BOINC and use the same credentials. Currently it is possible to mine Gridcoins on cell phones, tablets, mini PC (think Raspberry Pi and its clones), desktops, gamer's PCs, playstations, high end servers and on advanced mining equipment using both CPU and GPUs.\\
+Independent of whether the user mines solo or in the pool, it suffices to set up a single Gridcoin wallet linked to the same BOINC credentials. All devices used for mining will install BOINC and use the same credentials. Currently it is possible to mine Gridcoin using cell phones, tablets, PCs (even Raspberry Pi and its clones), playstations, high end servers, and advanced mining equipment. Both CPU and GPU mining are available, depending on the project.
 
-In a foreseable future, it will be possible to mine Gridcoins even on a user's smartwatch and on any computing device. If the Internet of Things becomes reality, maybe also on fridges and other electronic devices!
+In the foreseeable future, this list may expand further. With the growth of the Internet of Things, mining may even become possible on devices such as smart watches and house appliances! 
 
 \subsection{Integrating Gridcoin in Existing Exchanges}
 
-For exchanges that want to integrate Gridcoin in their infrastructure the client can be run entirely in textual mode out of a Linux bash shell. The daemon named \textit{gridcoinresearchd} implements the same commands with the same syntax as \textit{bitcoind}, making the integration of Gridcoin in any existing cryptocurrency exchange infrastructure quick and easy. [56]\\
+For exchanges that wish to integrate Gridcoin in their infrastructure, the client can be run entirely in textual mode out of a Linux bash shell. The daemon named \textit{gridcoinresearchd} implements the same commands with the same syntax as \textit{bitcoind}, making the integration of Gridcoin in any existing cryptocurrency exchange infrastructure quick and easy [56].\\
