@@ -17,87 +17,43 @@ To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The 
 
 \subsection{Recent Average Credit (RAC)}
 
-Recent Average Credit is calculated every time a user is granted new credit in form of cobblestones. Credits are exponentially averaged with a given half life of one week. Following explanation and figures are taken from [31]:\\
+Cobblestones are converted into a certain number of "credits" on a project-by-project basis. The unit of conversion is not monitored by BOINC, and hence some projects grant more credits per cobblestone than others. However, this discrepancy does not affect Gridcoin payouts, since a researcher's output for a given project is normalized by the overall output of Gridcoin researchers \textit{within the same project} (see section 5.3).  
 
-\begin{figure}
-\centering
-\includegraphics[scale=0.7]{figures/halflife}
-\medskip
-\caption{\textit{Decay function d(t) with a half life of 7 days }}
-\small
-\end{figure}
+Besides tracking the \textit{total} computational output of a researcher (measured in total credits), BOINC also calculates a quantity called the Recent Average Credit (RAC), which is a time-averaged measure of computational \textit{power} (credits per unit time). More precisely, RAC is an exponentially weighted moving average over computational power, thus granting more weight to recently earned credits. The details of its calculation are as follows.
 
-
-First, we define a decay function over seven days (t is given in days), in literature we often see the decay function in this form
-
+Generally speaking, an exponential moving average $S_i$ of a fixed-interval time series $X_i$ is a moving average which assigns exponentially less weight to data points in the past. More precisely,
 \begin{equation}
-d(t) =  \mathrm{e}^{-t \cdot  ln(2) / th}  
-\end{equation}
-
-with $th$ as the halving parameter of the decay function. We can transform the decay function in this way to reveal its behaviour:
-
+S_i = (1-\alpha)^i X_0 + \alpha \sum_{j = 1}^i (1-\alpha)^{j-1} X_{i-j+1}
+\end{equation} 
+where $0 < \alpha < 1$ is a constant weighting factor. A large $\alpha$, corresponding to smaller $1-\alpha$, assigns smaller weight to data points in the past. $S_i$ can also be computed recursively for $i > 1$:
 \begin{equation}
-d(t) =  \mathrm{e}^{-t \cdot  ln(2) / th} = \mathrm{e}^{ln(2) \cdot  -t/th} = \mathrm{e}^{ln(2)^{-t/th}} = 2^{-t/th}
+S_i = \alpha X_i + (1-\alpha) S_{i-1}.
 \end{equation}
-
+with $S_0 \equiv X_0$. This moving average can be understood intuitively using figure XXX. The output is $S_i$, and the input is $X_i$. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. The input’s rapid jump to 2 did not really make it to the output. Thus, $S_i$ has a smoothing effect on the relatively noisy series $X_i$ [31]. \\
+We want to implement something similar for computational power. On the other hand, generally BOINC updates its statistics at uneven time intervals $\ldots <  t_{i-2} < t_{i-1} < t_i$, and hence a time-dependent weight $\alpha$ must be defined. BOINC has found it convenient to use the exponential weighting factor:
 \begin{equation}
-d(t) =  2^{-t/th} =  2^{-1^{t/th}} = \bigg(\frac{1}{2}\bigg)^{t/th}
+\alpha_i = 1 - \mathrm{e}^{-(t_i-t_{i-1}) \cdot  \ln(2) / th}  
 \end{equation}
-
-We now set for $th$ the value 7 days, as we want the function to half its value after seven days and get:
-
+where $t$ is given in days. The BOINC source code works equivalently in terms of the weight function 
 \begin{equation}
-d(t) = \bigg(\frac{1}{2}\bigg)^{t/7}
+w(t_i - t_{i-1}) \equiv \mathrm{e}^{-(t_i-t_{i-1}) \cdot  \ln(2) / th}.
 \end{equation}
-
-We evaluate the function at zero, seven, fourteen and $\infty$:
-
+ The quantity $th$ is called the halving parameter, since
 \begin{equation}
-d(0) = \bigg(\frac{1}{2}\bigg)^{0} = 1
+w(t_i - t_{i-1})  =  \left( \mathrm{e}^{-\ln(2)} \right)^{(t_i-t_{i-1})/th} = \bigg(\frac{1}{2}\bigg)^{(t_i-t_{i-1})/th}
 \end{equation}
-
+using elementary properties of logarithms. BOINC has found it convenient to set $th$ equal to 7 days. Note that when $t_i - t_{i-1}$ is large, $\alpha_i$ is close to $1$, thus indeed granting exponentially less weight to older computations. In fact, if RAC is updated weekly, credit from 1 week ago is granted half the weight, credit from 2 weeks ago is granted one-quarter the weight, etc. Roughly speaking, credit from more than 2 months ago will not contribute significantly. \\
+Let's put all of this together. Suppose the computational power at time $t_i$ is $R_i$. Having defined $RAC(t_i)$ in the above as the weighted moving average of the previous $R_i$, we have:
 \begin{equation}
-d(7) = \bigg(\frac{1}{2}\bigg)^{7/7} = \bigg(\frac{1}{2}\bigg)^{1} = \frac{1}{2} 
+RAC(t_i) = \left[1 - w(t_i - t_{i-1})\right] R_i + w(t_i - t_{i-1}) \cdot RAC(t_{i-1}).
 \end{equation}
-
-\begin{equation}
-d(14) = \bigg(\frac{1}{2}\bigg)^{14/7} = \bigg(\frac{1}{2}\bigg)^{2} = \frac{1}{4} 
-\end{equation}
-
-\begin{equation}
-d(\infty) = \bigg(\frac{1}{2}\bigg)^{\infty/7} = \bigg(\frac{1}{2}\bigg)^{\infty} = 0 
-\end{equation}
-
-
-As you can see in the chart after one week the value is exactly halve, a week later it is again halved. Also note that after a half day the value has dropped to 0.95. It is a continuous mechanism. 7 is said to be the half life of the function. [31]\\
-
-We now take an infinite impulse response low-pass filter with $\alpha$ as smoothing factor:
-
-\begin{equation}
-new\_value = \alpha \cdot old\_value + (1-\alpha) * new\_input
-\end{equation}
-
-The graph gives an impression on how the above filter function behaves. As the input jumps to 1 the output slowly follows and wants to go to 1 as time passes. When the input changes this just repeats. This is called low pass because the output will only follow slow changes, at relevantly low frequencies. The input’s fast short jump to 2 did not really make it to the output. [31]\\
 
 \begin{figure}
 \centering
 \includegraphics{figures/low-pass}
-\caption{\textit{A low pass filter in action smooths spikes and dips}}
+\caption{\textit{An exponential moving average in action smooths spikes and dips}}
 \small
 \end{figure}
-
-
-To get the formula for Recent Average Credit, we use the decay function $d(t)$ as smoothing factor in the infinite impulse response low pass filter:
-
-\begin{equation}
-\alpha=d(t)
-\end{equation}
-
-\begin{equation}
-RAC(new) = RAC(old) \cdot d(t) + (1-d(t)) \cdot credit(new)
-\end{equation}
-
-where $credit(new)$ is the credit in cobblestones for a calculated workunit issued in instant $t$.
 
 \subsection{Gridcoin Payout to User Running Multiple Projects}
 
