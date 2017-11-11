@@ -19,7 +19,7 @@ To understand \textit{RAC}, we first look at the \textit{cobblestone} [22]. The 
 
 Cobblestones are converted into a certain number of "credits" on a project-by-project basis. The unit of conversion is not monitored by BOINC, and hence some projects grant more credits per cobblestone than others. However, this discrepancy does not affect Gridcoin payouts, since a researcher's output for a given project is normalized by the overall output of Gridcoin researchers \textit{within the same project} (see section 5.3).  
 
-Besides tracking the \textit{total} computational output of a researcher (measured in total credits), BOINC also calculates a quantity called the Recent Average Credit (RAC), which is a time-averaged measure of computational \textit{power} (credits per unit time). More precisely, RAC is an exponentially weighted moving average over computational power, thus granting more weight to recently earned credits. The details of its calculation are as follows.
+Besides tracking the \textit{total} computational output of a researcher (measured in total credits), BOINC also calculates a quantity called the Recent Average Credit (RAC), which is a time-averaged measure of computational \textit{power} (credits per unit time). More precisely, RAC is an exponentially weighted moving average over computational power, thus granting more weight to recently earned credits versus old credits. The details of its calculation are as follows.
 
 Generally speaking, an exponential moving average $S_i$ of a fixed-interval time series $X_i$ is a moving average which assigns exponentially less weight to data points in the past. More precisely,
 \begin{equation}
