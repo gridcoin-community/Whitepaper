@@ -18,6 +18,12 @@ These improvements were already made by Blackcoin [44], which Gridcoin, in an ef
 
 BOINC participation is not required to receive a Proof of Stake payment. A wallet that is not associated with a BOINC account is called an Investor wallet.
 
+\subsubsection{Block Kernel Target}
+
+\begin{equation}
+\end{equation}
+
+
 \subsection{Proof of Research}
 
 To tie BOINC and Gridcoin together and create a protocol that is both Proof of Work and Proof of Stake, but not wasteful of its resources in doing so, values from both algorithms are stored in the block header to provide a point of reference and cryptographic proof. Next to the normal Proof hash of Blackcoin, Gridcoin introduces the hash of the BOINC email together with the distributed client public key, which is used to calculate the CPID. This is called the CPID hashing algorithm. While the CPID is public, it cannot be used, or even stolen by another user, since he also needs the email for that, which only has its hashed value stored. Any invalid CPID is rejected, meaning that the CPID needs to be genuine, and the user has signed up with team Gridcoin. The user's magnitude is verified by parsing the XML as a 3rd party. This is described as Accuracy.\\
