@@ -21,8 +21,16 @@ BOINC participation is not required to receive a Proof of Stake payment. A walle
 \subsubsection{Block Kernel Target}
 
 \begin{equation}
+X_{i+1}=X_i \cdot \frac{\Big( \frac{16 \cdot 60}{90} - 1 \Big) \cdot 90 + (t_{i} - t_{i-1}) + (t_i - t_{i-1})   }{ \Big( \frac{16 \cdot 60}{90} + 1 \Big) \cdot 90} 
 \end{equation}
 
+\begin{equation}
+X_{i+1}=X_i \cdot \frac{810+2*(t_{i} - t_{i-1})}{990}
+\end{equation}
+
+\begin{equation}
+X_{i+1}=X_i \cdot \frac{405+(t_{i} - t_{i-1})}{495}
+\end{equation}
 
 \subsection{Proof of Research}
 
