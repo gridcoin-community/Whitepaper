@@ -32,18 +32,45 @@ X_{i+1}=X_i \cdot \frac{810+2*(t_{i} - t_{i-1})}{990}
 X_{i+1}=X_i \cdot \frac{405+(t_{i} - t_{i-1})}{495}
 \end{equation}
 
-Legend: $t_i$ is time when a block i was created (CBlock.nTime). $X_i$ is the block kernel target like in Bitcoin [63].
+Legend: $t_i$ is time when a block i was created (CBlock.nTime). $X_i$ is the block kernel target like in Bitcoin [63]. In equation (3) we see that the more time passes since creation of the last block $X_i$ the higher the block kernel target gets. The higher kernel target makes easier for miners to satisfy the Proof of Stake Inequality.
 
 \subsubsection{Proof of Stake Inequality}
 
 To create a new valid block for the Gridcoin blockchain the following inequality has
-to be satisfied\footnote{This paragraph is sourced from [59] but it includes security fixes done in [60].}:
+to be satisfied:\footnote{This paragraph is sourced from [59] but it includes security fixes done in [60].}:
 
 \begin{equation}
 SHA256(SHA256(kernel)) < X_i \cdot UTXO
 \end{equation}
 
-The kernel value represents the concatenation of the parameters listed in Table 2. The referenced unspent transaction output ($UTXO$) must be at least 16 hours old. 
+
+First a data string (called $kernel$) is formed from the kernel components (see table), then the kernel is hashed to obtain a proof hash, and then this proof hash is compared to the current block kernel target. Both proof hash and target are (big) numbers. The kernel forms a valid proof only if the proof hash is less than the block kernel target. [60]\\
+
+The idea of PoS is that you can't just iterate over some nonce trying endlessly, burning your CPU/GPU/ASIC power, until you find a valid kernel. In PoS, you can only try using different coins you have and the current time. [60]\\
+
+The referenced unspent transaction output ($UTXO$) must be at least 16 hours old. \\
+
+\begin{center}
+\begin{figure}
+ \begin{tabular}{||c c||} 
+ \hline
+ Field & Description \\ [0.5ex] 
+ \hline
+ txPrev.block.nTime & block time of referenced tx  \\
+ \hline
+ txPrev.nTime & timestamp of referenced tx  \\
+ \hline
+ txPrev.vout.hash & hash of referenced tx output  \\
+ \hline
+ txPrev.vout.n & index of referenced tx output  \\
+ \hline
+ nTime & current UNIX timestamp  \\ [1ex] 
+ \hline
+\end{tabular}
+\medskip
+\caption{\textit{Gridcoin Kernel Parameters} }
+\end{figure}
+\end{center}
 
 \subsection{Proof of Research}
 
