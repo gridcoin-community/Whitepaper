@@ -1,3 +1,3 @@
 # Whitepaper
 
-This is a proposed technical whitepaper for Gridcoin Research.
+This is a proposed whitepaper for Gridcoin Research.
