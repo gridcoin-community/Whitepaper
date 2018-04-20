@@ -1,0 +1,202 @@
+%!Adobe-FontList 1.19
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MinionPro-Regular
+FamilyName:Minion Pro
+StyleName:Regular
+FullName:Minion Pro
+MenuName:Minion Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\MinionPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:218640
+FileModTime:1510637050
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,4,Minion Pro
+NameArray:0,Win,1,Minion Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:MyriadPro-Regular
+FamilyName:Myriad Pro
+StyleName:Regular
+FullName:Myriad Pro
+MenuName:Myriad Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\MyriadPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:97072
+FileModTime:1519743126
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:110
+NameArray:0,Mac,4,Myriad Pro
+NameArray:0,Win,1,Myriad Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SourceSansPro-Black
+FamilyName:Source Sans Pro
+StyleName:Black
+FullName:Source Sans Pro Black
+MenuName:Source Sans Pro Black
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-Black.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:288824
+FileModTime:1343710800
+WeightClass:900
+WidthClass:5
+AngleClass:0
+DesignSize:100
+NameArray:0,Mac,4,Source Sans Pro Black
+NameArray:0,Win,1,Source Sans Pro Black
+NameArray:0,Win,16,Source Sans Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SourceSansPro-Bold
+FamilyName:Source Sans Pro
+StyleName:Bold
+FullName:Source Sans Pro Bold
+MenuName:Source Sans Pro
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-Bold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:290916
+FileModTime:1343710800
+WeightClass:700
+WidthClass:5
+AngleClass:0
+DesignSize:100
+NameArray:0,Mac,4,Source Sans Pro Bold
+NameArray:0,Win,1,Source Sans Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SourceSansPro-Italic
+FamilyName:Source Sans Pro
+StyleName:Italic
+FullName:Source Sans Pro Italic
+MenuName:Source Sans Pro
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-Italic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:103828
+FileModTime:1343710800
+WeightClass:400
+WidthClass:5
+AngleClass:1
+DesignSize:100
+NameArray:0,Mac,4,Source Sans Pro Italic
+NameArray:0,Win,1,Source Sans Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SourceSansPro-Regular
+FamilyName:Source Sans Pro
+StyleName:Regular
+FullName:Source Sans Pro Regular
+MenuName:Source Sans Pro
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-Regular.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:293516
+FileModTime:1343710800
+WeightClass:400
+WidthClass:5
+AngleClass:0
+DesignSize:100
+NameArray:0,Mac,4,Source Sans Pro Regular
+NameArray:0,Win,1,Source Sans Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SourceSansPro-SemiBold
+FamilyName:Source Sans Pro
+StyleName:SemiBold
+FullName:Source Sans Pro SemiBold
+MenuName:Source Sans Pro SemiBold
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-SemiBold.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:291864
+FileModTime:1343710800
+WeightClass:600
+WidthClass:5
+AngleClass:0
+DesignSize:100
+NameArray:0,Mac,4,Source Sans Pro SemiBold
+NameArray:0,Win,1,Source Sans Pro SemiBold
+NameArray:0,Win,16,Source Sans Pro
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SourceSansPro-SemiBoldItalic
+FamilyName:Source Sans Pro
+StyleName:SemiBold Italic
+FullName:Source Sans Pro SemiBold Italic
+MenuName:Source Sans Pro SemiBold
+StyleBits:1
+WritingScript:Roman
+OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-SemiBoldItalic.ttf
+DataFormat:sfntData
+hasSVG:no
+VariableFontType:NonVariableFont
+FileLength:103556
+FileModTime:1343710800
+WeightClass:600
+WidthClass:5
+AngleClass:1
+DesignSize:100
+NameArray:0,Mac,4,Source Sans Pro SemiBold Italic
+NameArray:0,Win,1,Source Sans Pro SemiBold
+NameArray:0,Win,16,Source Sans Pro
+%EndFont
+
