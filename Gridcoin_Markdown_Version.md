@@ -1,4 +1,4 @@
-## GRIDCOIN WHITE PAPER: The Computation Power of a Blockchain Driving Science & Data Analysis
+## GRIDCOIN WHITE PAPER:The Computation Power of a Blockchain Driving Science & Data Analysis  
 Version 1.0.0
 
 ## Mission
@@ -10,6 +10,7 @@ Gridcoin is an open-source blockchain that mints and distributes cryptocurrency 
 ## Idle Processing Potential
 Gridcoin defines Idle Processing Potential (IPP) as the processing power of a computing device multiplied by the proportion of unused processing over time. Any object that houses a processor is potentially part of this network. This includes not only computers, but also everyday objects such as phones, gaming systems, cars, toys, and smart appliances. IPP represents an enormous resource which will continue to grow as processors and embedded devices become an increasingly pervasive part of modern life. Gridcoin taps into this significant potential from both legacy and developing systems by encouraging the contribution of IPP to approved distributed computing platforms.
 ![enter image description here](https://lh3.googleusercontent.com/DtOzOYJkuxpob_1L1C7DWpx5LGrtP3hoqeTENeSRegC0sByc0mzv76FPRBkZJupJvPNbpNzLRj_m)
+
 **How much Idle Processing Potential is there?**
 > An iPhone 6 is capable of running 7 gigaFLOPS. If we assume all 2.5
 > billion smartphones in circulation operate at this level, smartphones
@@ -31,57 +32,55 @@ Distributed computing platforms are larger entities approved by the Gridcoin net
 The Berkeley Open Infrastructure for Network Computing (BOINC) is an open-source distributed computing infrastructure which provides anyone with data the opportunity to process that data for near zero cost by utilizing a global volunteer-based distributed computing network. To date, BOINC has been the driving force behind numerous computationally intensive research programs, such as pulsar identification,[^5] the creation of patient specific cancer treatments, [^6]the simulation of candidate molecules for next-generation solar panels,[^7] along with many others. While BOINC has been used primarily for science and mathematics, it can host data from any open or commercial field so long as the data can be formatted for BOINC’s processes. Examples of projects include tasks on engineering, cryptography, rendering, weather and climate prediction, as well as social, market, and resource analytics. Enigma@home,[^8] for example, works to break remaining WWII messages encrypted by an Enigma machine.
 
 **BOINC Projects**
->GRC can only be minted for crunching projects that are
->on the Gridcoin whitelist. Whitelisted projects are
->italicized below, list accurate as of 3 March 2018.
->**Biology & Medicine:**
->DrugDiscovery@Home
->*GPUGrid.net*
->RNA World
->*Rosetta@home*
->*TN-Grid*
->**Cognitive Science & AI:**
->MindModeling@home
->**Distributed Sensing:**
->Quake Catcher Network
->Radioactive@Home
->**Earth Science:**
->Climateprediction.net
->**Physical Science:**
->Acoustics@home
->*Asteroids@home*
->*Cosmology@Home*
->*Einstein@home*
->Leiden Classical
->*LHC@home*
->*Milkyway@home*
->*SETI@home*
->SourceFinder
->*theSkyNet POGS*
->*Universe@home*
->*VGTU project@Home*
->**Mathematics:**
->*Amicable Numbers*
->*Collatz Conjecture*
->**Math/Computing/Games:**
->*Enigma@Home*
->Gerasim@Home
->Moo! Wrapper
->*NFS@home*
->*NumberFields@home*
->ODLK
->*ODLK1*
->primaboinca
->*PrimeGrid*
->SAT@home
->*SRBase*
->*SZTAKI Desktop Grid*
->**Multiple Applications:**
->CAS@home
->*Citizen Science Grid*
->*World Community Grid*
->*YAFU*
->*Yoyo@home*
+>GRC can only be minted for crunching projects that are on the Gridcoin whitelist. Whitelisted projects are italicized below, list accurate as of 3 March 2018.  
+>**Biology & Medicine:**  
+>DrugDiscovery@Home  
+>*GPUGrid.net*  
+>RNA World  
+>*Rosetta@home*  
+>*TN-Grid*   
+>**Cognitive Science & AI:**  
+>MindModeling@home  
+>**Distributed Sensing:**  
+>Quake Catcher Network  
+>Radioactive@Home  
+>**Earth Science:**  
+>Climateprediction.net  
+>**Physical Science:**  
+>Acoustics@home  
+>*Asteroids@home*  
+>*Cosmology@Home*  
+>*Einstein@home*  
+>Leiden Classical  
+>*LHC@home*  
+>*Milkyway@home*  
+>*SETI@home*  
+>SourceFinder  
+>*theSkyNet POGS*  
+>*Universe@home*  
+>*VGTU project@Home*  
+>**Mathematics:**  
+>*Amicable Numbers*  
+>*Collatz Conjecture*  
+>**Math/Computing/Games:**  
+>*Enigma@Home*  
+>Gerasim@Home  
+>Moo! Wrapper  
+>*NFS@home*  
+>*NumberFields@home*  
+>ODLK  
+>*ODLK1*  
+>primaboinca  
+>*PrimeGrid*  
+>SAT@home  
+>*SRBase*  
+>*SZTAKI Desktop Grid*  
+>**Multiple Applications:**  
+>CAS@home  
+>*Citizen Science Grid*  
+>*World Community Grid*  
+>*YAFU*  
+>*Yoyo@home*  
 
 ### Operation
 BOINC consists of two main components: a project server system and client software. The project server, hosted individually by each BOINC project, stores and distributes project data to the client software running on volunteers’ host computers. Once the host completes the data crunching task, known as a work unit, it returns the results to the project server. Upon verification of the validity and honesty of the completed work unit, a reward in the form of BOINC credits is distributed to the host which completed the task. Credits serve primarily as a proof of participation tool in BOINC’s larger gamification system. Outside of BOINC, Gridcoin uses a participant’s earned BOINC credits to calculate their relative GRC reward.
