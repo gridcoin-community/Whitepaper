@@ -9,6 +9,7 @@ Gridcoin is an open-source blockchain that mints and distributes cryptocurrency 
 
 ## Idle Processing Potential
 Gridcoin defines Idle Processing Potential (IPP) as the processing power of a computing device multiplied by the proportion of unused processing over time. Any object that houses a processor is potentially part of this network. This includes not only computers, but also everyday objects such as phones, gaming systems, cars, toys, and smart appliances. IPP represents an enormous resource which will continue to grow as processors and embedded devices become an increasingly pervasive part of modern life. Gridcoin taps into this significant potential from both legacy and developing systems by encouraging the contribution of IPP to approved distributed computing platforms.
+
 ![enter image description here](https://lh3.googleusercontent.com/DtOzOYJkuxpob_1L1C7DWpx5LGrtP3hoqeTENeSRegC0sByc0mzv76FPRBkZJupJvPNbpNzLRj_m)
 
 **How much Idle Processing Potential is there?**
@@ -33,19 +34,24 @@ The Berkeley Open Infrastructure for Network Computing (BOINC) is an open-source
 
 **BOINC Projects**
 >GRC can only be minted for crunching projects that are on the Gridcoin whitelist. Whitelisted projects are italicized below, list accurate as of 3 March 2018.  
+>  
 >**Biology & Medicine:**  
 >DrugDiscovery@Home  
 >*GPUGrid.net*  
 >RNA World  
 >*Rosetta@home*  
 >*TN-Grid*   
+>  
 >**Cognitive Science & AI:**  
 >MindModeling@home  
+>  
 >**Distributed Sensing:**  
 >Quake Catcher Network  
 >Radioactive@Home  
+>  
 >**Earth Science:**  
 >Climateprediction.net  
+>  
 >**Physical Science:**  
 >Acoustics@home  
 >*Asteroids@home*  
@@ -59,9 +65,11 @@ The Berkeley Open Infrastructure for Network Computing (BOINC) is an open-source
 >*theSkyNet POGS*  
 >*Universe@home*  
 >*VGTU project@Home*  
+>  
 >**Mathematics:**  
 >*Amicable Numbers*  
 >*Collatz Conjecture*  
+>  
 >**Math/Computing/Games:**  
 >*Enigma@Home*  
 >Gerasim@Home  
@@ -75,6 +83,7 @@ The Berkeley Open Infrastructure for Network Computing (BOINC) is an open-source
 >SAT@home  
 >*SRBase*  
 >*SZTAKI Desktop Grid*  
+>  
 >**Multiple Applications:**  
 >CAS@home  
 >*Citizen Science Grid*  
@@ -126,6 +135,7 @@ Gridcoin is ready to receive proposals. Interested parties can reach the develop
 
 ## Participants
 Gridcoin participants are individuals or entities who are active in the Gridcoin ecosystem. There are currently two types of participants.
+
 ![enter image description here](https://lh3.googleusercontent.com/cc3MGPDEglRzdQ1bbZwcS_C83CBVSwnTHWKHsCUmTV__u_E5TBKzOMXf9aIoNoQIZS8NclI240Y2)
 
 ### Crunchers
