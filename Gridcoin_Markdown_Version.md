@@ -250,47 +250,46 @@ Gridcoin prioritizes inclusive open-source development that focuses on community
 > https://itsmyurls.com/gridcoin.
 
 ### Website and Wallet Software
-
-Website and Wallets
+Website and Wallets  
 https://gridcoin.us
 
 ### Development Repositories
-Gridcoin Research Client
-https://github.com/gridcoin/Gridcoin-Research
-Gridcoin Research Community, for non-wallet based projects
+Gridcoin Research Client  
+https://github.com/gridcoin/Gridcoin-Research  
+Gridcoin Research Community, for non-wallet based projects  
 https://github.com/gridcoin-community
 
 ### Block Explorers
-Gridcoinexplorer
-https://grcexplorer.neuralminer.io
-Gridcoin.Network
-https://gridcoin.network
-Gridcoinstats
-https://gridcoinstats.eu
+Gridcoinexplorer  
+https://grcexplorer.neuralminer.io  
+Gridcoin.Network  
+https://gridcoin.network  
+Gridcoinstats  
+https://gridcoinstats.eu  
 
 ### Social Media
-Discord
-https://discord.me/page/gridcoin
-Facebook
-https://www.facebook.com/gridcoins
-Medium
-https://medium.com/@gridcoinnetwork
-Reddit
-https://www.reddit.com/r/gridcoin
-Steemit
-https://steemit.com/created/gridcoin
-Telegram
-https://t.me/gridcoin
-Tumblr
-https://gridcoin.tumblr.com
-Twitter
-https://twitter.com/GridcoinNetwork
+Discord  
+https://discord.me/page/gridcoin  
+Facebook  
+https://www.facebook.com/gridcoins  
+Medium  
+https://medium.com/@gridcoinnetwork  
+Reddit  
+https://www.reddit.com/r/gridcoin  
+Steemit  
+https://steemit.com/created/gridcoin  
+Telegram  
+https://t.me/gridcoin  
+Tumblr  
+https://gridcoin.tumblr.com  
+Twitter  
+https://twitter.com/GridcoinNetwork  
 
 ### Other Resources
-Gridcoin.io
-https://gridcoin.io
- Wiki
-http://wiki.gridcoin.us/Main_Page
+Gridcoin.io  
+https://gridcoin.io  
+ Wiki  
+http://wiki.gridcoin.us/Main_Page  
 
 [^1]:https://boinc.berkeley.edu
 [^2]:https://worldcommunitygrid.org
