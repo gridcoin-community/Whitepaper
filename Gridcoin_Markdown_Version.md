@@ -310,5 +310,5 @@ http://wiki.gridcoin.us/Main_Page
 [^17]:http://www.unesco.org/new/en/communication-and-information/access-to-knowledge/open-educational-resources
 [^18]:https://www.worldcommunitygrid.org
 [^19]:https://boinc.multi-pool.info/latinsquares
-[^20]:Johnson, Norman L. “Diversity in Decentralized Systems: Enabling Self-Organizing Solutions.” Theoretical Division, Los Alamos National Laboratory, for University of California Los Angeles 1999 Conference “Decentralization Two”.
-[^21]:https://gridcoinstats.eu/poll/developer_reimbursment_6_month_package
+[^20]:http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.80.1110
+[^21]:https://gridcoinstats.eu
