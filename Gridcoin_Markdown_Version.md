@@ -220,7 +220,7 @@ The aforementioned open-knowledge principals culminate in open-education. Being 
 The current approved distributed-computing platform, BOINC, enables not only massive laboratories, organizations, or research universities to produce projects for discovery, but individuals as well. Gridcoin values this type of open education initiative and whitelists projects which are large in scope, such as World Community Grid,[^18] as well as smaller projects such as ODLK1.[^19]
 
 ### Decentralized Operation
-‘A decentralized system is where some decisions by the agents are made without centralized control or processing. An important property of agent systems is the degree of connectivity or connectedness between the agents.’
+‘A decentralized system is where some decisions by the agents are made without centralized control or processing. An important property of agent systems is the degree of connectivity or connectedness between the agents.’[^20]
 
 Decentralization solves the single point of failure problem, allows for diversity, larger participation in decision-making, provides equality, and limits encroachment by centralized higher authorities.
 
@@ -233,7 +233,7 @@ The Gridcoin network is comprised of blockchain purists, enthusiasts, and coders
 When the Gridcoin protocol switched from proof-of-work to proof-of-stake, there was a set number of GRC which were not claimed during the fork. This GRC was reserved in a wallet designated for development funding. In July of 2017, a reimbursement process was proposed and passed for approved developer contributions.
 
 ### Development
-Gridcoin prioritizes inclusive open-source development that focuses on community involvement and inclusion. While there are a number of core developers who have proven commitment to the project over time, there is no concrete development team behind Gridcoin. Anyone is welcome to propose improvements and changes through the Gridcoin GitHub repositories, and if the changes are approved, they are welcome to seek reimbursement from the Gridcoin Foundation.
+Gridcoin prioritizes inclusive open-source development that focuses on community involvement and inclusion. While there are a number of core developers who have proven commitment to the project over time, there is no concrete development team behind Gridcoin. Anyone is welcome to propose improvements and changes through the Gridcoin GitHub repositories, and if the changes are approved, they are welcome to seek reimbursement from the Gridcoin Foundation.[^21]
 
 **Paid Development**
 
@@ -310,3 +310,5 @@ http://wiki.gridcoin.us/Main_Page
 [^17]:http://www.unesco.org/new/en/communication-and-information/access-to-knowledge/open-educational-resources
 [^18]:https://www.worldcommunitygrid.org
 [^19]:https://boinc.multi-pool.info/latinsquares
+[^20]:Johnson, Norman L. “Diversity in Decentralized Systems: Enabling Self-Organizing Solutions.” Theoretical Division, Los Alamos National Laboratory, for University of California Los Angeles 1999 Conference “Decentralization Two”.
+[^21]:https://gridcoinstats.eu/poll/developer_reimbursment_6_month_package
