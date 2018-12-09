@@ -265,7 +265,7 @@ https://grcexplorer.neuralminer.io
 Gridcoin.Network  
 https://gridcoin.network  
 Gridcoinstats  
-https://gridcoinstats.eu  
+https://www.gridcoinstats.eu  
 
 ### Social Media
 Discord  
