@@ -1,10 +1,10 @@
 ADOBE INDESIGN PRINTING INSTRUCTIONS FOR SERVICE PROVIDER REPORT
 
-PUBLICATION NAME: Gridcoin_White_Paper_1.0.0.indd
+PUBLICATION NAME: Gridcoin_White_Paper_1.0.1.indd
 
-PACKAGE DATE: 4/17/2018 4:58 PM
-Creation Date: 4/17/2018
-Modification Date: 4/17/2018
+PACKAGE DATE: 12/9/2018 10:12 PM
+Creation Date: 12/9/2018
+Modification Date: 12/9/2018
 
 CONTACT INFORMATION
 
@@ -31,11 +31,13 @@ External Plug-ins 0
 Non Opaque Objects :On Page12
 
 FONTS
-11 Fonts Used; 0 Missing, 3 Embedded, 0 Incomplete, 0 Protected
+11 Fonts Used; 0 Missing, 3 Embedded, 0 Incomplete, 1 Protected
 
 Fonts Packaged
 - Name: MinionPro-Regular; Type: OpenType Type 1, Status: OK
-- Name: MyriadPro-Regular; Type: OpenType Type 1, Status: OK
+Fonts Not Packaged
+- Name: MyriadPro-Regular; Type: OpenType Type 1, Status: Synced
+Fonts Packaged
 - Name: SourceSansPro-Black; Type: TrueType, Status: Embedded
 - Name: SourceSansPro-Black; Type: OpenType TrueType, Status: OK
 - Name: SourceSansPro-Bold; Type: ???, Status: Embedded
@@ -89,14 +91,13 @@ Flip Mode: Off
 
 FILE PACKAGE LIST
 
-1. Gridcoin_White_Paper_1.0.0.indd; type: Adobe InDesign publication; size: 2912K
-2. Gridcoin_White_Paper_1.0.0.idml; type: InDesign Markup Document; size: 408K
-3. Gridcoin_White_Paper_1.0.0.pdf; type: Adobe Acrobat Document; size: 772K
+1. Gridcoin_White_Paper_1.0.1.indd; type: Adobe InDesign publication; size: 2928K
+2. Gridcoin_White_Paper_1.0.1.idml; type: InDesign Markup Document; size: 408K
+3. Gridcoin_White_Paper_1.0.1.pdf; type: Adobe Acrobat Document; size: 772K
 4. MinionPro-Regular.otf; type: Font file; size: 213K
-5. MyriadPro-Regular.otf; type: Font file; size: 94K
-6. SourceSansPro-Black.ttf; type: Font file; size: 282K
-7. SourceSansPro-Bold.ttf; type: Font file; size: 284K
-8. SourceSansPro-Italic.ttf; type: Font file; size: 101K
-9. SourceSansPro-Regular.ttf; type: Font file; size: 286K
-10. SourceSansPro-SemiBold.ttf; type: Font file; size: 285K
-11. SourceSansPro-SemiBoldItalic.ttf; type: Font file; size: 101K
+5. SourceSansPro-Black.ttf; type: Font file; size: 282K
+6. SourceSansPro-Bold.ttf; type: Font file; size: 284K
+7. SourceSansPro-Italic.ttf; type: Font file; size: 101K
+8. SourceSansPro-Regular.ttf; type: Font file; size: 286K
+9. SourceSansPro-SemiBold.ttf; type: Font file; size: 285K
+10. SourceSansPro-SemiBoldItalic.ttf; type: Font file; size: 101K
