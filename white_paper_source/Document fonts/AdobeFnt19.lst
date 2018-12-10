@@ -11,14 +11,14 @@ FullName:Minion Pro
 MenuName:Minion Pro
 StyleBits:0
 WritingScript:Roman
-OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\MinionPro-Regular.otf
+OutlineFileName:C:\Users\Bill\GitHubLocalRepos\Whitepaper\white_paper_source\Document fonts\MinionPro-Regular.otf
 DataFormat:sfntData
 UsesStandardEncoding:yes
 isCFF:yes
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:218640
-FileModTime:1510637050
+FileModTime:1525308249
 WeightClass:400
 WidthClass:5
 AngleClass:0
@@ -37,14 +37,14 @@ FullName:Myriad Pro
 MenuName:Myriad Pro
 StyleBits:0
 WritingScript:Roman
-OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\MyriadPro-Regular.otf
+OutlineFileName:C:\Users\Bill\GitHubLocalRepos\Whitepaper\white_paper_source\Document fonts\MyriadPro-Regular.otf
 DataFormat:sfntData
 UsesStandardEncoding:yes
 isCFF:yes
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:97072
-FileModTime:1519743126
+FileModTime:1525308249
 WeightClass:400
 WidthClass:5
 AngleClass:0
@@ -63,12 +63,12 @@ FullName:Source Sans Pro Black
 MenuName:Source Sans Pro Black
 StyleBits:0
 WritingScript:Roman
-OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-Black.ttf
+OutlineFileName:C:\Users\Bill\GitHubLocalRepos\Whitepaper\white_paper_source\Document fonts\SourceSansPro-Black.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:288824
-FileModTime:1343710800
+FileModTime:1525308249
 WeightClass:900
 WidthClass:5
 AngleClass:0
@@ -88,12 +88,12 @@ FullName:Source Sans Pro Bold
 MenuName:Source Sans Pro
 StyleBits:2
 WritingScript:Roman
-OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-Bold.ttf
+OutlineFileName:C:\Users\Bill\GitHubLocalRepos\Whitepaper\white_paper_source\Document fonts\SourceSansPro-Bold.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:290916
-FileModTime:1343710800
+FileModTime:1525308249
 WeightClass:700
 WidthClass:5
 AngleClass:0
@@ -112,12 +112,12 @@ FullName:Source Sans Pro Italic
 MenuName:Source Sans Pro
 StyleBits:1
 WritingScript:Roman
-OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-Italic.ttf
+OutlineFileName:C:\Users\Bill\GitHubLocalRepos\Whitepaper\white_paper_source\Document fonts\SourceSansPro-Italic.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:103828
-FileModTime:1343710800
+FileModTime:1525308249
 WeightClass:400
 WidthClass:5
 AngleClass:1
@@ -136,12 +136,12 @@ FullName:Source Sans Pro Regular
 MenuName:Source Sans Pro
 StyleBits:0
 WritingScript:Roman
-OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-Regular.ttf
+OutlineFileName:C:\Users\Bill\GitHubLocalRepos\Whitepaper\white_paper_source\Document fonts\SourceSansPro-Regular.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:293516
-FileModTime:1343710800
+FileModTime:1525308249
 WeightClass:400
 WidthClass:5
 AngleClass:0
@@ -160,12 +160,12 @@ FullName:Source Sans Pro SemiBold
 MenuName:Source Sans Pro SemiBold
 StyleBits:0
 WritingScript:Roman
-OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-SemiBold.ttf
+OutlineFileName:C:\Users\Bill\GitHubLocalRepos\Whitepaper\white_paper_source\Document fonts\SourceSansPro-SemiBold.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:291864
-FileModTime:1343710800
+FileModTime:1525308249
 WeightClass:600
 WidthClass:5
 AngleClass:0
@@ -185,12 +185,12 @@ FullName:Source Sans Pro SemiBold Italic
 MenuName:Source Sans Pro SemiBold
 StyleBits:1
 WritingScript:Roman
-OutlineFileName:F:\Design Work\Creative Cloud Files\Gridcoin Graphics\Whitepaper\Gridcoin_White_Paper_1.0.0 Folder\Document fonts\SourceSansPro-SemiBoldItalic.ttf
+OutlineFileName:C:\Users\Bill\GitHubLocalRepos\Whitepaper\white_paper_source\Document fonts\SourceSansPro-SemiBoldItalic.ttf
 DataFormat:sfntData
 hasSVG:no
 VariableFontType:NonVariableFont
 FileLength:103556
-FileModTime:1343710800
+FileModTime:1525308249
 WeightClass:600
 WidthClass:5
 AngleClass:1
