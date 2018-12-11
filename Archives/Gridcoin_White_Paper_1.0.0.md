@@ -1,5 +1,5 @@
 ## GRIDCOIN WHITE PAPER:The Computation Power of a Blockchain Driving Science & Data Analysis  
-Version 1.0.1
+Version 1.0.0
 
 ## Mission
 Gridcoin is a blockchain-based distributed computing network powered by the idle processing potential of existing hardware. Access to this network is free for those with data to process, while participants of the network are incentivized with cryptocurrency minted by the Gridcoin protocol.
@@ -265,7 +265,7 @@ https://grcexplorer.neuralminer.io
 Gridcoin.Network  
 https://gridcoin.network  
 Gridcoinstats  
-https://www.gridcoinstats.eu  
+https://gridcoinstats.eu  
 
 ### Social Media
 Discord  
